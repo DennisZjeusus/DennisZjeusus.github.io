@@ -240,7 +240,7 @@ body.sticky-header header {
 
     form{
       width: 100%;
-      margin:2em;
+      padding:.36em;
     }
 
     input {
@@ -276,7 +276,7 @@ body.sticky-header header {
     input[type="submit"]{
       vertical-align: top;
       height: 1.8em;
-      width:36%;
+      width:50%;
       margin: 0;
       padding: 0;
       border: 0;

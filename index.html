@@ -21,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="css/slide.css">
   <link rel="stylesheet" type="text/css" href="css/gallery.css">
   <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="css/card.css">
   <link rel="stylesheet" href="css/responsive.css">
 
 <style type="text/css">
@@ -86,74 +87,6 @@ header nav a, footer nav a{
   #social-sidebar a[class*="paypal"] span,
   #social-sidebar a[class*="paypal"] span:before {background: #27346a;}
 
-main{
-  width:100%;
-  align-content: center;
-  text-align: center;
-  line-height: 1;
-  padding-bottom:1.2em;
-}
-
-main h2{
-  color:gold;
-  font-weight: bold;
-}
-
-main p{
-  color:black;
-  font-size:1.2em;
-}
-
-main .section{
-  padding:0;
-}
-
-#ms{
-  width:100%;
-  height:auto;
-  background-image:url(img/missionschool/IMG-20200811-WA0016.jpg);
-  /*background: no-repeat center;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  /*background-size:100% 100%;*/
-}
-
-#ch{
-  width:100%;
-  height:auto;
-  background-image:url(img/childhome/IMG-20200811-WA0007.jpg);
-  /*background: no-repeat center;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  /*background-size:100% 100%;*/
-}
-
-#fp{
-  width:100%;
-  height:auto;
-  background-image:url(img/foodprogram/IMG-20200811-WA0020.jpg);
-  /*background: no-repeat center;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  /*background-size:100% 100%;*/
-}
-
-#hp{
-  width:100%;
-  height:auto;
-  background-image:url(img/home/IMG-20200811-WA0017.jpg);
-  /*background: no-repeat center;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  /*background-size:100% 100%;*/
-}
-
-button.tog{
-  width:42%;
-  height: 2.4em;
-  background-color: tomato;
-}
-
 #donate{
   background-color: rgba(255,255,255,0.9);
   height: 100%;
@@ -214,11 +147,12 @@ button.tog{
 
 #footer{
   width: 100%;
-  height: 18em;
+  height: auto;
   z-index: 1;
-  background-color: rgba(255, 255, 0, 0.9);
+  background-color: gainsboro;
   bottom: 0;
-  padding-top: .18em;
+  padding-top: 0;
+  padding-bottom: 1em;
 }
 
 @media screen and (max-width:1620px)
@@ -227,10 +161,7 @@ header a{
   text-align: left;
   /*float:left;*/
 }
-.log{
 
-  /*font-size:1.8em;*/
-}
 .mot{
   font-size: 1.8em;
 }
@@ -250,6 +181,21 @@ header a{
 
 @media screen and (max-width:1107px)
 {
+    .section{
+    padding-top: 39.9%;
+  }
+
+  #home{
+    height: 100%;
+  }
+
+  .log{
+
+    font-size:1.8em;
+  }
+  .mot{
+    font-size: 1.2em;
+  }
 
  body.sticky-header header {
     height: 33%;
@@ -260,15 +206,7 @@ header a{
   }
 
   body.sticky-header header .mot{
-    font-size:.9em;
-  }
-
-  body.sticky-header header .connect h2{
-    font-size:.6em;
-  }
-
-  body.sticky-header header .connect p{
-    font-size:.51em;
+    font-size:.1.2em;
   }
 
 #about, #donate
@@ -280,16 +218,19 @@ header a{
 
 #cmtlist button{
   position: relative;
-  left: 30%;
 }
 
   header, footer{
-    height:51%;
+    height:36%;
   }
 
   header a, footer a{
     text-align: center;
     /*float:left;*/
+  }
+
+  .cards{
+    padding: 0 1em;
   }
 
   .connect{
@@ -298,7 +239,7 @@ header a{
     position: relative;
     padding-top: .33em;
     text-align: center;
-    font-size: 1.2em;
+    font-size: .9em;
   }
 
 .connect h2{
@@ -310,13 +251,23 @@ header a{
   margin:0;
   padding: .3em;
   color: black;
-  font-size: .6em;
-  line-height: .3em;
+  line-height: .6em;
+}
+
+#contact
+{
+  height:100%;
+  justify-content: center;
+  align-items: center;
 }
 }
 
 @media screen and (max-height:877px)
 {
+
+  header, footer{
+    height:42%;
+  }
 
   header, footer{
     height:240px;
@@ -329,12 +280,17 @@ header a{
 
 @media screen and (max-width:859px)
 {
+
+  header, footer {
+    height: 33%;
+  }
+
   header nav a, nav .dropbtn {
     font-size: .6em;
     padding:. .3em;
   }
 
-  header .log{
+  .log{
     font-size:2.1em;
   }
 
@@ -346,23 +302,25 @@ header a{
     font-size:.9em;
   }
 
-  body.sticky-header header .connect h2{
-    font-size:.6em;
-  }
+  .connect p
+  {
+    font-size: .6em;
 
-  body.sticky-header header .connect p{
-    font-size:.52em;
   }
 
   .section{
     padding-top: 51%;
   }
+
+  .cards {
+    padding:0;
+  }
 }
 
 @media screen and (max-width:567px)
 {
-  header, footer{
-    height:49%;
+  header, footer {
+    height: 36%;
   }
 
   body.sticky-header header {
@@ -377,12 +335,8 @@ header a{
     font-size: 1em;
   }
 
-  .mot{
-    font-size: 1.2em;
-  }
-
   .section{
-    padding-top: 42vh;
+    padding-top: 36vh;
   }
 
   .form-news, #googleMap{
@@ -392,9 +346,22 @@ header a{
 }
 
 
-@media screen and (max-width:386px)
+@media screen and (max-width:521px)
 {
-  header .log{
+
+  header, footer {
+    height: 37.2%;
+  }
+
+  body.sticky-header header {
+    height: 39%;
+  }
+
+  .connect h2, .connect p {
+    font-size:.6em;
+  }
+
+  .log{
     font-size:1.5em;
   }
 
@@ -402,14 +369,6 @@ header a{
     font-size: .9em;
   }
 
-  .connect, .connect h2, .connect p {
-    line-height: .9em;
-    font-size:.9em;
-  }
-
-  .section {
-    padding-top: 50vh;
-}
 }
 
 
@@ -426,6 +385,8 @@ console.log(classList);
   {
     $('#'+classList+'').removeClass("active");
     $("#threeb").css("height", "4.2em");
+    $("#threeb").css("background-color", "white");
+    $("#threeb").html("Read more...");
   }else
   {
     console.log($(".active").attr("id"));
@@ -436,6 +397,8 @@ console.log(classList);
     }
     $('#foodprog').addClass("active");
     $("#threeb").css("height", "2.4em");
+    $("#threeb").css("background-color", "coral");
+    $("#threeb").html("Show less");
     console.log($(".active").attr("id"));
   }
   $('#three').slideToggle();
@@ -450,6 +413,8 @@ $('#oneb').on('click', function () { /* do stuff */
   {
     $('#'+classList+'').removeClass("active");
     $("#oneb").css("height", "4.2em");
+    $("#oneb").css("background-color", "white");
+    $("#oneb").html("Read more...");
     console.log(classList);
   }else
   {
@@ -461,6 +426,8 @@ $('#oneb').on('click', function () { /* do stuff */
     }
     $('#childhom').addClass("active");
     $("#oneb").css("height", "2.4em");
+    $("#oneb").css("background-color", "coral");
+    $("#oneb").html("Show less");
     console.log($(".active").attr("id"));
   }
 
@@ -476,6 +443,8 @@ console.log(classList);
   {
     $('#'+classList+'').removeClass("active");
     $("#twob").css("height", "4.2em");
+    $("#twob").css("background-color", "white");
+    $("#twob").html("Read more...");
   }else
   {
     console.log($(".active").attr("id"));
@@ -486,6 +455,8 @@ console.log(classList);
     }
     $('#missionschool').addClass("active");
     $("#twob").css("height", "2.4em");
+    $("#twob").css("background-color", "coral");
+    $("#twob").html("Show less");
     console.log($(".active").attr("id"));
   }
   $('#two').slideToggle();
@@ -500,6 +471,10 @@ console.log(classList);
   {
     $('#'+classList+'').removeClass("active");
     $("#fourb").css("height", "4.2em");
+    $("#fourb").css("background-color", "white");
+    $("#fourb").html("Read more...");
+
+
   }else
   {
     console.log($(".active").attr("id"));
@@ -510,6 +485,8 @@ console.log(classList);
     }
     $('#healthprog').addClass("active");
     $("#fourb").css("height", "2.4em");
+    $("#fourb").css("background-color", "coral");
+    $("#fourb").html("Show less");
     console.log($(".active").attr("id"));
   }
   $('#four').slideToggle();
@@ -543,7 +520,6 @@ console.log(classList);
       </div>
       <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
         <div class="dropdown">
           <a class="dropbtn" href="#gallery">Gallery</a>
           <div class="dropdown-content">
@@ -615,42 +591,8 @@ console.log(classList);
       <div class="item" class="ananda">
         <h2>Ananda Marga Mission in Kenya</h2>
         <p>Ananda Marga Mission, we are a foundation of people serving the people. We believe service to humanity is service to God. We serve humanity through our Food Distribution Program, the Children's Home Program, moreover building a better future through our Mission School Program, We welcome you to help humanity.</p>
-        <button class="more"><a href="#about">Know more...</a></button>
+        <button class="more"><a href="#projects">Know more...</a></button>
       </div>
-    </div>
-    <div id="about" class="section flx">
-      <div class="item">
-        <h2>Ananda Marga Mission in Kenya</h2>
-        <p>Ananda Marga Mission, we are a foundation of people serving the people. Registered on, 04/03/1975.</p>
-        <p>Board Members</p>
-        <p>Chairman: Dinesh Kumar</p>
-        <p>Secretary: Jitendra Kumar</p>
-        <p>Treasurer: Tor Bjornsen</p>
-        <p>Member: Charles Masereti Arori</p>
-        <p>Member: Douma Jean Toussaint</p>
-        <p>Total no of beneficiary from Ananda Marga Mission in Kenya is around 2 million people every year</p>
-      </div>
-      <div class="item progfood">
-        <h2>Food Program</h2>
-        <p>The food program offers food to those in need. It is a helping hand to feed the hungry. For more detail look at projects.</p>
-        <button class="more"><a href="#threem">Know more...</a></button>
-      </div>
-      <div class="item schlmission">
-        <h2>Mission School</h2>
-        <p>Education is the key to success and to secure the succes of the future, we offer an education program to children who will create a bright future. For more information look at projects.</p>
-      </div>
-      <div class="item childhm">
-        <h2>Children's Home</h2>
-        <p>Ananda Marga Mission offers shelter for children in need of protectionn and basic needs, food, shelter, clothing. We have a responsibility to care for the future in our children as humanity. To know more look at projects.</p>
-        <button class="more"><a href="#onem">Know more...</a></button>
-      </div>
-
-      <div class="item healthcare">
-        <h2>health program</h2>
-        <p>AMURT Health Care Center head quarter in Nairobi offers services to those in need of health care services. The health program is active in other locations other than Nairobi, refer to the active projects.</p>
-        <button class="more"><a href="#fourm">Know more...</a></button>
-      </div>
-
     </div>
 
     <div id="gallery" class="section">
@@ -783,106 +725,116 @@ console.log(classList);
     </div>
 
     <div id="projects" class="section">
-       <main id="foodprog"  class="active">
-        <h2>food program</h2>
-        <p style="font-weight: bold;">Food distribution program at the headquater at Ananda Marga Mission head quarter in Nairobi</p>
-        <div id="fp">
-          <button id="threeb" class="tog">know more...</button>
-        <div id="three">
-          <div id="about" class="section flx">
-            <div class="item">
-              <p>Every Sunday Food distribution program to 3,000 people, from 7.00 to 10.00 am at Ananda Marga Mission head quarter in Nairobi.</p>
-              <p>Every Sunday Feeding program to 1000 children at Ananda Marga Mission head quarter in Nairobi, from 1,00 to 2.00 pm in Nairobi.</p>
-            </div>
-            <div class="item">
-              <p>Ananda Marga Academy(Primary School ) in Kangemi. We provide free breakfast and lunch to all children and dinner to the class-8 candidates.</p>
-              <p>Ananda Marga Academy(High school) in Kangemi. We provide free breakfast, lunch and dinner to all the children.</p>
-              <p>Ananda Marga School in Githurai 45. We provide free breakfast and lunch to all the children.</p>
-            </div>
-          </div>
-        </div>
-        </div>
 
+      <ul class="cards">
+        <li id="foodprog" class="active cards__item">
+          <div class="card">
+            <div class="card__image card__image--fp"></div>
+            <div class="card__content">
+              <div class="card__title"><h2>food program</h2></div>
+              <p class="card__text" style="font-weight: bold;">Food distribution program at the headquater at Ananda Marga Mission head quarter in Nairobi</p>
 
-      </main>
-
-
-      <main id="childhom"  class="active" style="margin-bottom: .9em;">
-        <h2>Children's home</h2>
-        <p style="font-weight: bold;">Ananda Marga Children’s Home in head quarter in Nairobi</p>
-        <div id="ch">
-        <button id="oneb" class="tog">know more...</button>
-
-
-          <div id="one" >
-          <div id="about" class="section flx">
-            <div class="item">
-              <p>Ananda Marga Children’s Home in head quarter in Nairobi for 20 children.</p>
-              <p>Ananda Marga Children’s Home in Mombasa for 24 children</p>
-            </div>
-            <div class="item">
-              <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+              <div id="three">
+                <div id="about" class=" flx">
+                  <div class="item">
+                    <p>Every Sunday Food distribution program to 3,000 people, from 7.00 to 10.00 am at Ananda Marga Mission head quarter in Nairobi.</p>
+                    <p>Every Sunday Feeding program to 1000 children at Ananda Marga Mission head quarter in Nairobi, from 1,00 to 2.00 pm in Nairobi.</p>
+                  </div>
+                  <div class="item">
+                    <p>Ananda Marga Academy(Primary School ) in Kangemi. We provide free breakfast and lunch to all children and dinner to the class-8 candidates.</p>
+                    <p>Ananda Marga Academy(High school) in Kangemi. We provide free breakfast, lunch and dinner to all the children.</p>
+                    <p>Ananda Marga School in Githurai 45. We provide free breakfast and lunch to all the children.</p>
+                  </div>
+                </div>
+              </div>
+              <button id="threeb" class="btn btn--block card__btn">Read more...</button>
             </div>
           </div>
-        </div>
-        </div>
+        </li>
+        <br/>
+        <li id="childhom" class="active cards__item">
+          <div class="card">
+            <div class="card__image card__image--ch"></div>
+            <div class="card__content">
+              <div class="card__title"><h2>Children's home</h2></div>
+              <p class="card__text" style="font-weight: bold;">Ananda Marga Children’s Home in head quarter in Nairobi</p>
 
-
-      </main>
-      <main id="missionschool"  class="active">
-        <h2>mission school</h2>
-        <p style="font-weight: bold;">The school program is a  service to humanity's future. Weat Anand Marga believe the future are the children and to succeed education is the key.</p>
-        <div id="ms">
-          <button id="twob" class="tog">Know more...</button>
-        <div id="two">
-          <div id="about" class="section flx">
-            <div class="item">
-              <p>Ananda Marga Academy(Primary School ) in Kangemi with 345 children.</p>
-              <p>Ananda Marga Academy(High school) in Kangemi with 201 children.</p>
-              <p>Ananda Marga Academy in Njiru 26 children.</p>
-              <p>Ananda Marga Academy in Huruma for WWD department- 400 children.</p>
-              <p>Ananda Marga Academy in Sodom for WWD department:21 children.</p>
-              <p>HIV/Aids day care center in Nairobi with 112 children</p>
-            </div>
-            <div class="item">
-              <p>Ananda Marga Education Center in Kangemi for WWD department: 150 children.</p>
-              <p>Ananda Marga Academy in Ruai for WWD department: 15 children.</p>
-              <p>Ananda Marga Academy in Nakuru for WWD department: 140 children.</p>
-              <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
-              <p>Ananda Marga Academy in Kiembeni in Mombasa for WWD department 420 children.</p>
-              <p>AMURT Likoni Primary School for 600 children.</p>
+              <div id="one" >
+                <div id="about" class=" flx">
+                  <div class="item">
+                    <p>Ananda Marga Children’s Home in head quarter in Nairobi for 20 children.</p>
+                    <p>Ananda Marga Children’s Home in Mombasa for 24 children</p>
+                  </div>
+                  <div class="item">
+                    <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+                  </div>
+                </div>
+              </div>
+              <button id="oneb" class="btn btn--block card__btn ">Read more...</button>
             </div>
           </div>
-        </div>
+        </li>
+        <br/>
+        <li id="missionschool" class="active cards__item">
+          <div class="card">
+            <div class="card__image card__image--ms"></div>
+            <div class="card__content">
+              <div class="card__title"><h2>mission school</h2></div>
+              <p class="card__text" style="font-weight: bold;">The school program is a  service to humanity's future. Weat Anand Marga believe the future are the children and to succeed education is the key.</p>
 
-        </div>
-
-      </main>
-
-      <main id="healthprog"  class="active">
-        <h2>health program</h2>
-        <p style="font-weight: bold;">We offer health services at  AMURT health Care Center, head quarter in Nairobi.</p>
-        <div id="hp">
-          <button id="fourb" class="tog">Know more...</button>
-        <div id="four">
-          <div id="about" class="section flx">
-            <div class="item">
-              <p>AMURT health Care Center in head quarter in Nairobi.</p>
-              <p>AMURT Health Care Centre at Likoni in Mombsa.</p>
-              <p>AMURT Health Care Center in Malindi.</p>
-              <p>AMURT project in Samburu.</p>
-            </div>
-            <div class="item">
-              <h3>Proposed projects</h3>
-              <p>Proposed Ananda Marga Mission clinic in Githurai-44.</p>
-              <p></p>
+              <div id="two">
+                <div id="about" class=" flx">
+                  <div class="item">
+                    <p>Ananda Marga Academy(Primary School ) in Kangemi with 345 children.</p>
+                    <p>Ananda Marga Academy(High school) in Kangemi with 201 children.</p>
+                    <p>Ananda Marga Academy in Njiru 26 children.</p>
+                    <p>Ananda Marga Academy in Huruma for WWD department- 400 children.</p>
+                    <p>Ananda Marga Academy in Sodom for WWD department:21 children.</p>
+                    <p>HIV/Aids day care center in Nairobi with 112 children</p>
+                  </div>
+                  <div class="item">
+                    <p>Ananda Marga Education Center in Kangemi for WWD department: 150 children.</p>
+                    <p>Ananda Marga Academy in Ruai for WWD department: 15 children.</p>
+                    <p>Ananda Marga Academy in Nakuru for WWD department: 140 children.</p>
+                    <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+                    <p>Ananda Marga Academy in Kiembeni in Mombasa for WWD department 420 children.</p>
+                    <p>AMURT Likoni Primary School for 600 children.</p>
+                  </div>
+                </div>
+              </div>
+              <button id="twob" class="btn btn--block card__btn">Read more...</button>
             </div>
           </div>
-        </div>
+        </li>
+        <br/>
+        <li id="healthprog" class="active cards__item">
+          <div class="card">
+            <div class="card__image card__image--hp"></div>
+            <div class="card__content">
+              <div class="card__title"><h2>health program</h2></div>
+              <p class="card__text "style="font-weight: bold;">We offer health services at  AMURT health Care Center, head quarter in Nairobi.</p>
 
-        </div>
+              <div id="four">
+                <div id="about" class=" flx">
+                  <div class="item">
+                    <p>AMURT health Care Center in head quarter in Nairobi.</p>
+                    <p>AMURT Health Care Centre at Likoni in Mombsa.</p>
+                    <p>AMURT Health Care Center in Malindi.</p>
+                    <p>AMURT project in Samburu.</p>
+                  </div>
+                  <div class="item">
+                    <h3>Proposed projects</h3>
+                    <p>Proposed Ananda Marga Mission clinic in Githurai-44.</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <button id="fourb" class="btn btn--block card__btn">Read more...</button>
+            </div>
+          </div>
+        </li>
+      </ul>
 
-      </main>
     </div>
 
     <div id="donate" class="section flx">
@@ -935,19 +887,20 @@ console.log(classList);
       <div id="googleMap" style=""></div>
     </div>
   </div>
-    <div id="footer" class="section flx">
+    <div id="footer" class="section">
       <footer style="position: relative;">
-        <a href="index.html" title="Ananda Marga: Meditation, Yoga and Social Service" rel="home"><h1 class="log">ANANDA MARGA<!-- <picture><img width="440" height="96" src="img/logo44096.png" class="attachment-full size-full lazyload" alt="Ananda Marga: Meditation, Yoga and Social Service" srcset="img/logo44096.png 440w, img/logo1040.png 1040w" sizes="(max-width: 440px) 100vw, 440px"/></picture> --></h1>
-        <h2 class="mot">service to humanity is service to God</h2>
-        </a>
-        <div class="connect">
-          <h2>Head Office: Ananda Marga Mission in Kenya</h2>
-          <p>Plot No 209</p>
-          <p>Mountainview Estate, Waiyaki Way</p>
-          <p>Nairobi, Kenya</p>
-          <p>P.O. Box: 70202-00400, Nairobi, Kenya</p>
-          <p>Mobile: +254724537444</p>
-          <p>Email: ssnairobi74@gmail.com</p>
+          <div id="about" class=" flx">
+            <div class="item">
+              <p>Head Office: Ananda Marga Mission in Kenya</p>
+              <p>Plot No 209</p>
+              <p>Mountainview Estate, Waiyaki Way</p>
+              <p>Nairobi, Kenya</p>
+            </div>
+            <div class="item">
+              <p>P.O. Box: 70202-00400, Nairobi, Kenya</p>
+              <p>Mobile: +254724537444</p>
+              <p>Email: ssnairobi74@gmail.com</p>
+            </div>
         </div>
       </footer>
     </div>

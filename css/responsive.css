@@ -11,17 +11,6 @@
 }
 }
 
-@media screen and (max-width:1300px)
-{
-  .section{
-    background-size: fill;
-    width:100%;
-    /*height:auto;*/
-    scroll-snap-align:start;
-    padding-top: 49%;
-  }
-
-}
 
 @media screen and (max-width:850px)
 {
@@ -34,9 +23,7 @@
     font-size: .9em;
   }
 
-  .section{
-    padding-top: 33%;
-  }
+
 }
 
 @media screen and (max-width:600px)

@@ -1,0 +1,63 @@
+#slider {
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    border: 7px ridge coral;
+    box-sizing: border-box;
+}
+#img-slider {
+    position: relative;
+    width: 500%;
+    left: 0;
+    -webkit-animation: slider 18s infinite;
+    -moz-animation: slider 18s infinite;
+    -o-animation: slider 18s infinite;
+    -ms-animation: slider 18s infinite;
+    animation: slider 18s infinite;
+    -webkit-animation-delay: 8.1s;
+    -moz-animation-delay: 8.1s;
+    -o-animation-delay: 8.1s;
+    -ms-animation-delay: 8.1s;
+    animation-delay: 8.1s;
+}
+
+#img-slider img {
+    width: 20%;
+    float: left;
+}
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+#img-slider:hover {
+    animation-play-state: paused;
+}
+/*#img-slider:active {
+    animation-play-state: paused;
+}*/

@@ -18,10 +18,62 @@
   <link rel="stylesheet" href="css/sty.css">
 
   <link rel="stylesheet" type="text/css" href="css/ico.css">
-  <link rel="stylesheet" type="text/css" href="css/sly.css">
+  <link rel="stylesheet" type="text/css" href="css/slide.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/dropdown.css">
   <link rel="stylesheet" href="css/responsive.css">
 
 <style type="text/css">
+
+.log, .mot{
+  font-family: Arial;
+}
+
+.log{
+  font-size:3.9em;
+}
+
+header nav a, footer nav a{
+  text-decoration: none;
+}
+
+.mot{
+  text-transform:none;
+  font-size: 2.1em;
+  color:black;
+  font-weight: 100;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.connect{
+  top:0;
+  right:2%;
+  font-size: .9em;
+  /*line-height: .9em;*/
+  position:absolute;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 100%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.connect h2{
+    font-size: 1.5em;
+}
+
+.connect p
+{
+  margin:0;
+  padding: .3em;
+  color: black;
+}
+
   #social-sidebar a[class*="linkedin"]:hover,
   #social-sidebar a[class*="linkedin"] span,
   #social-sidebar a[class*="linkedin"] span:before {background: #0073b0;}
@@ -36,52 +88,112 @@
 
 main{
   width:100%;
+  align-content: center;
+  text-align: center;
+  line-height: 1;
+  padding-bottom:1.2em;
+}
+
+main h2{
+  color:gold;
+  font-weight: bold;
+}
+
+main p{
+  color:black;
+  font-size:1.2em;
+}
+
+main .section{
+  padding:0;
+}
+
+#ms{
+  width:100%;
+  height:auto;
+  background-image:url(img/missionschool/IMG-20200811-WA0016.jpg);
+  /*background: no-repeat center;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-size:100% 100%;*/
+}
+
+#ch{
+  width:100%;
+  height:auto;
+  background-image:url(img/childhome/IMG-20200811-WA0007.jpg);
+  /*background: no-repeat center;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-size:100% 100%;*/
+}
+
+#fp{
+  width:100%;
+  height:auto;
+  background-image:url(img/foodprogram/IMG-20200811-WA0020.jpg);
+  /*background: no-repeat center;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-size:100% 100%;*/
+}
+
+#hp{
+  width:100%;
+  height:auto;
+  background-image:url(img/home/IMG-20200811-WA0017.jpg);
+  /*background: no-repeat center;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-size:100% 100%;*/
 }
 
 button.tog{
-  width:100%;
+  width:42%;
   height: 2.4em;
   background-color: tomato;
 }
 
-#socials{
+#donate{
   background-color: rgba(255,255,255,0.9);
   height: 100%;
+  line-height: 1.2em;
 }
 
-#socials div{
+#donate div{
   padding:.33em;
   width:96%;
   margin:0;
 }
 
-.social-header{
+.donate-header{
     width:100%;
     height:2.4em;
 }
 
+#donate{
+  align-items: unset;
+  justify-content: unset;
+  text-align: left;
+  color: black;
+
+}
+
+#donate h2{
+  line-height: 1.2em;
+}
+
+#cmtlist p{
+  font-size: 1.5em;
+}
+
 .form-news{
+
   background-color: #FFD700;
 }
 
-#dtext, #cmtlist{
-  display: flex;
-  flex-flow:column;
-  width: 100%;
-/*  height: auto;*/
-}
-
-#cmtlist{
-  height:39em;
-  overflow-y: auto;
-}
-
-h4, #namebox, #txt1{
-  width: 100%;
-  padding:.63em;
-}
-
-#dtext button{
+.more{
+  /*width: 42%;*/
   background-color: tomato;
   color: #fff;
   border: 0;
@@ -94,41 +206,211 @@ h4, #namebox, #txt1{
   text-align: center;
 }
 
-#cmtlist p{
-  border: .33em solid rgba(255, 255, 0, 0.9);
-  border-radius:.63em;
+#googleMap{
+  width:100%;
+  height: 18em;
+  margin: .9em;
 }
-
-#namebox, #txt1{
-  border-radius:.33em;
-}
-
 
 #footer{
   width: 100%;
-  height: 9vh;
+  height: 18em;
   z-index: 1;
   background-color: rgba(255, 255, 0, 0.9);
   bottom: 0;
   padding-top: .18em;
 }
 
-  @media screen and (max-width:543px)
+@media screen and (max-width:1620px)
+{
+header a{
+  text-align: left;
+  /*float:left;*/
+}
+.log{
+
+  /*font-size:1.8em;*/
+}
+.mot{
+  font-size: 1.8em;
+}
+.connect h2{
+  /*font-size: .4em;*/
+}
+
+.connect p
+{
+  margin:0;
+  /*padding: .3em;*/
+  /*font-size: .3em;*/
+}
+
+}
+
+
+@media screen and (max-width:1107px)
 {
 
-  header nav a{
-    font-size:.6em;
-    padding:.06em;
+ body.sticky-header header {
+    height: 33%;
   }
 
-  header nav a:hover {
-  -moz-box-shadow: 0 0 0 0.6px #fff;
-  -webkit-box-shadow: 0 0 0 0.6px #fff;
-  box-shadow: 0 0 0 .6px #fff;
-  background-color: #6BB130;
+  body.sticky-header header .log{
+    font-size:1.8em;
+  }
+
+  body.sticky-header header .mot{
+    font-size:.9em;
+  }
+
+  body.sticky-header header .connect h2{
+    font-size:.6em;
+  }
+
+  body.sticky-header header .connect p{
+    font-size:.51em;
+  }
+
+#about, #donate
+{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#cmtlist button{
+  position: relative;
+  left: 30%;
+}
+
+  header, footer{
+    height:51%;
+  }
+
+  header a, footer a{
+    text-align: center;
+    /*float:left;*/
+  }
+
+  .connect{
+    top:unset;
+    right: unset;
+    position: relative;
+    padding-top: .33em;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+.connect h2{
+    font-size:1.2em;
+  }
+
+.connect p
+{
+  margin:0;
+  padding: .3em;
+  color: black;
+  font-size: .6em;
+  line-height: .3em;
 }
 }
 
+@media screen and (max-height:877px)
+{
+
+  header, footer{
+    height:240px;
+  }
+
+  body.sticky-header header {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width:859px)
+{
+  header nav a, nav .dropbtn {
+    font-size: .6em;
+    padding:. .3em;
+  }
+
+  header .log{
+    font-size:2.1em;
+  }
+
+  .connect{
+    line-height: 1.32em;
+  }
+
+  .connect h2{
+    font-size:.9em;
+  }
+
+  body.sticky-header header .connect h2{
+    font-size:.6em;
+  }
+
+  body.sticky-header header .connect p{
+    font-size:.52em;
+  }
+
+  .section{
+    padding-top: 51%;
+  }
+}
+
+@media screen and (max-width:567px)
+{
+  header, footer{
+    height:49%;
+  }
+
+  body.sticky-header header {
+    height: 33%;
+  }
+
+  body.sticky-header header .log{
+    font-size:1.5em;
+  }
+
+  .log{
+    font-size: 1em;
+  }
+
+  .mot{
+    font-size: 1.2em;
+  }
+
+  .section{
+    padding-top: 42vh;
+  }
+
+  .form-news, #googleMap{
+  width:25vh;
+}
+
+}
+
+
+@media screen and (max-width:386px)
+{
+  header .log{
+    font-size:1.5em;
+  }
+
+  .mot{
+    font-size: .9em;
+  }
+
+  .connect, .connect h2, .connect p {
+    line-height: .9em;
+    font-size:.9em;
+  }
+
+  .section {
+    padding-top: 50vh;
+}
+}
 
 
   </style>
@@ -136,11 +418,35 @@ h4, #namebox, #txt1{
   <script>
 $(document).ready(function(){
 
+$('#threeb').on('click', function () { /* do stuff */
+  // Get class list string
+  var classList = $(".active").attr("id");
+console.log(classList);
+  if(classList == 'foodprog')
+  {
+    $('#'+classList+'').removeClass("active");
+    $("#threeb").css("height", "4.2em");
+  }else
+  {
+    console.log($(".active").attr("id"));
+    if(classList != null)
+    {
+      $('#'+classList+'').find( "button" ).trigger( "click" );
+      // $( 'a[ id='+classList+' ]' ).removeClass("active");
+    }
+    $('#foodprog').addClass("active");
+    $("#threeb").css("height", "2.4em");
+    console.log($(".active").attr("id"));
+  }
+  $('#three').slideToggle();
+  console.log($(".active").attr("id"));
+});
+
 $('#oneb').on('click', function () { /* do stuff */
   // Get class list string
   var classList = $(".active").attr("id");
   console.log(classList);
-  if(classList == 'onem')
+  if(classList == 'childhom')
   {
     $('#'+classList+'').removeClass("active");
     $("#oneb").css("height", "4.2em");
@@ -153,7 +459,7 @@ $('#oneb').on('click', function () { /* do stuff */
       $('#'+classList+'').find( "button" ).trigger( "click" );
       // $( 'a[ id='+classList+' ]' ).removeClass("active");
     }
-    $('#onem').addClass("active");
+    $('#childhom').addClass("active");
     $("#oneb").css("height", "2.4em");
     console.log($(".active").attr("id"));
   }
@@ -166,7 +472,7 @@ $('#twob').on('click', function () { /* do stuff */
   // Get class list string
   var classList = $(".active").attr("id");
 console.log(classList);
-  if(classList == 'twom')
+  if(classList == 'missionschool')
   {
     $('#'+classList+'').removeClass("active");
     $("#twob").css("height", "4.2em");
@@ -178,7 +484,7 @@ console.log(classList);
       $('#'+classList+'').find( "button" ).trigger( "click" );
       // $( 'a[ id='+classList+' ]' ).removeClass("active");
     }
-    $('#twom').addClass("active");
+    $('#missionschool').addClass("active");
     $("#twob").css("height", "2.4em");
     console.log($(".active").attr("id"));
   }
@@ -186,8 +492,36 @@ console.log(classList);
   console.log($(".active").attr("id"));
 });
 
+$('#fourb').on('click', function () { /* do stuff */
+  // Get class list string
+  var classList = $(".active").attr("id");
+console.log(classList);
+  if(classList == 'healthprog')
+  {
+    $('#'+classList+'').removeClass("active");
+    $("#fourb").css("height", "4.2em");
+  }else
+  {
+    console.log($(".active").attr("id"));
+    if(classList != null)
+    {
+      $('#'+classList+'').find( "button" ).trigger( "click" );
+      // $( 'a[ id='+classList+' ]' ).removeClass("active");
+    }
+    $('#healthprog').addClass("active");
+    $("#fourb").css("height", "2.4em");
+    console.log($(".active").attr("id"));
+  }
+  $('#four').slideToggle();
+  console.log($(".active").attr("id"));
+});
+
+  $( "#threeb" ).trigger( "click" );
   $( "#oneb" ).trigger( "click" );
   $( "#twob" ).trigger( "click" );
+  $( "#fourb" ).trigger( "click" );
+
+
 
 });
 </script>
@@ -195,17 +529,44 @@ console.log(classList);
 <body>
 <div id="contain" class="container">
   <header>
-      <h1><a href="index.php" title="Ananda Marga: Meditation, Yoga and Social Service" rel="home"><picture><img width="440" height="96" src="img/logo44096.png" class="attachment-full size-full lazyload" alt="Ananda Marga: Meditation, Yoga and Social Service" srcset="img/logo44096.png 440w, img/logo1040.png 1040w" sizes="(max-width: 440px) 100vw, 440px"/></picture></a></h1>
+      <a href="index.html" title="Ananda Marga: Meditation, Yoga and Social Service" rel="home"><h1 class="log">ANANDA MARGA<!-- <picture><img width="440" height="96" src="img/logo44096.png" class="attachment-full size-full lazyload" alt="Ananda Marga: Meditation, Yoga and Social Service" srcset="img/logo44096.png 440w, img/logo1040.png 1040w" sizes="(max-width: 440px) 100vw, 440px"/></picture> --></h1>
+      <h2 class="mot">service to humanity is service to God</h2>
+      </a>
+      <div class="connect">
+        <h2>Head Office: Ananda Marga Mission in Kenya</h2>
+        <p>Plot No 209</p>
+        <p>Mountainview Estate, Waiyaki Way</p>
+        <p>Nairobi, Kenya</p>
+        <p>P.O. Box: 70202-00400, Nairobi, Kenya</p>
+        <p>Mobile: +254724537444</p>
+        <p>Email: ssnairobi74@gmail.com</p>
+      </div>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#socials">Posts</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#projects">Projects</a>
+        <div class="dropdown">
+          <a class="dropbtn" href="#gallery">Gallery</a>
+          <div class="dropdown-content">
+            <a href="#gamm">Ananda Headquaters</a>
+            <a href="#gfp">Food Program</a>
+            <a href="#gch">Children's Home</a>
+            <a href="#gms">Mission Scchool</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="dropbtn" href="#projects">Projects</a>
+          <div class="dropdown-content">
+            <a href="#foodprog">Food Program</a>
+            <a href="#childhom">Children's Home</a>
+            <a href="#missionschool">Mission School</a>
+            <a href="#healthprog">Health Program</a>
+          </div>
+        </div>
+        <a href="#donate">Donate</a>
         <a href="#contact">Contact</a>
       </nav>
   </header>
-  <ul id="social-sidebar" style="z-index: 1;">
+  <ul id="social-sidebar" style="z-index: 2;">
       <li>
         <a class="entypo-twitter"><span>Twitter</span></a>
       </li>
@@ -238,101 +599,321 @@ console.log(classList);
       </li> -->
     </ul>
   <div class="wraper">
-    <div id="home" class="section">
-      <ul class="cb-slideshow">
-            <li class="lazyload"><span>Image 01</span><div><h3>projects</h3></div></li>
-            <li class="lazyload"><span>Image 02</span><div><h3>events</h3></div></li>
-            <li class="lazyload"><span>Image 03</span><div><h3>meditation</h3></div></li>
-            <li class="lazyload"><span>Image 04</span><div><h3>service</h3></div></li>
-        </ul>
+    <div id="home" class="section flx">
+      <div  class="item">
+        <div id="slider">
+        <div id="img-slider">
+         <img src="img/home/IMG-20200811-WA0017.jpg" class="lazyload" alt="home"/>
+         <img src="img/foodprogram/IMG-20200811-WA0006.jpg" class="lazyload" alt="food program"/>
+         <img src="img/childhome/IMG-20200811-WA0007.jpg" class="lazyload" alt="children's home picture" />
+         <img src="img/missionschool/IMG-20200811-WA0013.jpg" class="lazyload" alt="mission school"/>
+         <img src="img/home/IMG-20200811-WA0021.jpg" class="lazyload" alt="home" />
+        </div>
+      </div>
+
+      </div>
+      <div class="item" class="ananda">
+        <h2>Ananda Marga Mission in Kenya</h2>
+        <p>Ananda Marga Mission, we are a foundation of people serving the people. We believe service to humanity is service to God. We serve humanity through our Food Distribution Program, the Children's Home Program, moreover building a better future through our Mission School Program, We welcome you to help humanity.</p>
+        <button class="more"><a href="#about">Know more...</a></button>
+      </div>
     </div>
     <div id="about" class="section flx">
       <div class="item">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
+        <h2>Ananda Marga Mission in Kenya</h2>
+        <p>Ananda Marga Mission, we are a foundation of people serving the people. Registered on, 04/03/1975.</p>
+        <p>Board Members</p>
+        <p>Chairman: Dinesh Kumar</p>
+        <p>Secretary: Jitendra Kumar</p>
+        <p>Treasurer: Tor Bjornsen</p>
+        <p>Member: Charles Masereti Arori</p>
+        <p>Member: Douma Jean Toussaint</p>
+        <p>Total no of beneficiary from Ananda Marga Mission in Kenya is around 2 million people every year</p>
       </div>
-      <div class="item">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
+      <div class="item progfood">
+        <h2>Food Program</h2>
+        <p>The food program offers food to those in need. It is a helping hand to feed the hungry. For more detail look at projects.</p>
+        <button class="more"><a href="#threem">Know more...</a></button>
       </div>
-      <div class="item">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, omnis quas, rem minus cupiditate, sunt voluptates minima sint nemo ipsa itaque consequatur dolor, quam necessitatibus vitae. Quod, eaque, quam.</p>
+      <div class="item schlmission">
+        <h2>Mission School</h2>
+        <p>Education is the key to success and to secure the succes of the future, we offer an education program to children who will create a bright future. For more information look at projects.</p>
       </div>
-      <div class="item">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, omnis quas, rem minus cupiditate, sunt voluptates minima sint nemo ipsa itaque consequatur dolor, quam necessitatibus vitae. Quod, eaque, quam.</p>
+      <div class="item childhm">
+        <h2>Children's Home</h2>
+        <p>Ananda Marga Mission offers shelter for children in need of protectionn and basic needs, food, shelter, clothing. We have a responsibility to care for the future in our children as humanity. To know more look at projects.</p>
+        <button class="more"><a href="#onem">Know more...</a></button>
       </div>
-      <div class="item">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, omnis quas, rem minus cupiditate, sunt voluptates minima sint nemo ipsa itaque consequatur dolor, quam necessitatibus vitae. Quod, eaque, quam.</p>
+
+      <div class="item healthcare">
+        <h2>health program</h2>
+        <p>AMURT Health Care Center head quarter in Nairobi offers services to those in need of health care services. The health program is active in other locations other than Nairobi, refer to the active projects.</p>
+        <button class="more"><a href="#fourm">Know more...</a></button>
+      </div>
+
+    </div>
+
+    <div id="gallery" class="section">
+
+      <h1 class="gheader">Ananda Marga Mission</h1>
+      <div id="gamm" class="wrapper">
+        <section id="section1">
+          <a href="#section2">‹</a>
+            <div class="gitem">
+              <picture><img src="img/home/IMG-20200811-WA0017.jpg" class="lazyload" alt="home" sizes=""/></picture>
+            </div>
+            <div class="gitem">
+              <picture><img src="img/home/IMG-20200811-WA0018.jpg" class="lazyload" alt="home" sizes=""/></picture>
+            </div>
+            <div class="gitem">
+              <picture><img src="img/home/IMG-202008112-WA0010.jpg" class="lazyload" alt="home" sizes=""/></picture>
+            </div>
+          <a href="#section2">›</a>
+        </section>
+        <section id="section2">
+          <a href="#section1">‹</a>
+
+              <div class="gitem">
+              <picture><img src="img/home/IMG-20200811-WA0022.jpg" class="lazyload" alt="home" sizes=""/></picture>
+            </div>
+            <div class="gitem">
+              <picture><img src="img/home/IMG-202008112-WA0019.jpg" class="lazyload" alt="home" sizes=""/></picture>
+            </div>
+            <div class="gitem">
+              <picture><img src="img/home/IMG-20200811-WA0021.jpg" class="lazyload" alt="home" sizes=""/></picture>
+            </div>
+          <a href="#section1">›</a>
+        </section>
+      </div>
+      <br/>
+      <h1 class="gheader">Ananda Marga Mission Food Program</h1>
+      <div id="gfp" class="wrapper">
+        <section id="section4">
+          <a href="#section5">‹</a>
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0011.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0012.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0006.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+            </div>
+
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0023.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+            </div>
+          <a href="#section5">›</a>
+        </section>
+        <section id="section5">
+          <a href="#section4">‹</a>
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0020.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0008.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+            </div>
+
+            <div class="gitem">
+              <picture><img src="img/foodprogram/IMG-20200811-WA0009.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+            </div>
+
+          <a href="#section4">›</a>
+        </section>
+
+      </div>
+      <br/>
+      <h1 class="gheader">Ananda Marga Children's Home</h1>
+      <div id="gch" class="wrapper">
+        <section id="section7">
+          <a href="#section7">‹</a>
+            <div class="gitem">
+              <picture><img src="img/childhome/IMG-20200811-WA0007.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/childhome/IMG-20200811-WA0024.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/childhome/IMG-20200811-WA0025.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
+            </div>
+          <a href="#section7">›</a>
+        </section>
+
+      </div>
+      <br/>
+
+      <h1 class="gheader">Ananda Marga Mission School</h1>
+      <div id="gms" class="wrapper">
+        <section id="section8">
+          <a href="#section9">‹</a>
+            <div class="gitem">
+              <picture><img src="img/missionschool/IMG-20200811-WA0026.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/missionschool/IMG-20200811-WA0016.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/missionschool/IMG-20200811-WA0014.jpg" class="lazyload" alt="mission school" srcset="" sizes=""/></picture>
+
+            </div>
+          <a href="#section9">›</a>
+        </section>
+        <section id="section9">
+          <a href="#section8">‹</a>
+            <div class="gitem">
+              <picture><img src="img/missionschool/IMG-20200811-WA0013.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+
+            </div>
+            <div class="gitem">
+              <picture><img src="img/missionschool/IMG-20200811-WA0015.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+            </div>
+          <a href="#section8">›</a>
+        </section>
       </div>
     </div>
 
-    <div id="socials" class="section flx">
-      <div class="item fb">
-        <h2 class="social-header" style="color:#fff;background-color:#3B5998; text-transform:uppercase;">Facebook</h2>
-        <div id="cmtlist">
-          <p style="border: .33em solid #3B5998;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
-          <p style="border: .33em solid#3B5998;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
-        </div>
-      </div>
-      <div class="item ig">
-        <h2 class="social-header" style="color:#fff;background-color:#E1306C; text-transform:uppercase;">Instagram</h2>
-        <div id="cmtlist">
-          <p style="border: .33em solid #E1306C;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
-          <p style="border: .33em solid #E1306C;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
-        </div>
-      </div>
-      <div class="item tw">
-        <h2 class="social-header" style="color:#fff;background-color:#00aced; text-transform:uppercase;">Twitter</h2>
-        <div id="cmtlist">
-          <p style="border: .33em solid #00aced;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, omnis quas, rem minus cupiditate, sunt voluptates minima sint nemo ipsa itaque consequatur dolor, quam necessitatibus vitae. Quod, eaque, quam.</p>
-          <p style="border: .33em solid #00aced;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
-        </div>
-      </div>
-      <div class="item li">
-        <h2 class="social-header" style="color:#fff;background-color:#0073b0; text-transform:uppercase;">Linkedin</h2>
-        <div id="cmtlist">
-          <p style="border: .33em solid #0073b0;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, omnis quas, rem minus cupiditate, sunt voluptates minima sint nemo ipsa itaque consequatur dolor, quam necessitatibus vitae. Quod, eaque, quam.</p>
-          <p style="border: .33em solid #0073b0;border-radius:.63em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
-        </div>
-      </div>
-    </div>
-    </br>
-    </br>
-    <div id="gallery" class="section" style="height:100vh;">
-      <ul class="cb-slideshow">
-            <li class="lazyload"><span>Image 01</span><div><h3>projects</h3></div></li>
-            <li class="lazyload"><span>Image 02</span><div><h3>events</h3></div></li>
-            <li class="lazyload"><span>Image 03</span><div><h3>meditation</h3></div></li>
-            <li class="lazyload"><span>Image 04</span><div><h3>service</h3></div></li>
-        </ul>
-    </div>
     <div id="projects" class="section">
-      <main id="onem"  class="active" style="margin-bottom: .9em;">
-        <button id="oneb" class="tog">Click to view and hide project 1</button>
-        <div id="one" class='photo-grid-container'>
+       <main id="foodprog"  class="active">
+        <h2>food program</h2>
+        <p style="font-weight: bold;">Food distribution program at the headquater at Ananda Marga Mission head quarter in Nairobi</p>
+        <div id="fp">
+          <button id="threeb" class="tog">know more...</button>
+        <div id="three">
           <div id="about" class="section flx">
             <div class="item">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
+              <p>Every Sunday Food distribution program to 3,000 people, from 7.00 to 10.00 am at Ananda Marga Mission head quarter in Nairobi.</p>
+              <p>Every Sunday Feeding program to 1000 children at Ananda Marga Mission head quarter in Nairobi, from 1,00 to 2.00 pm in Nairobi.</p>
             </div>
             <div class="item">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
+              <p>Ananda Marga Academy(Primary School ) in Kangemi. We provide free breakfast and lunch to all children and dinner to the class-8 candidates.</p>
+              <p>Ananda Marga Academy(High school) in Kangemi. We provide free breakfast, lunch and dinner to all the children.</p>
+              <p>Ananda Marga School in Githurai 45. We provide free breakfast and lunch to all the children.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+      </main>
+
+
+      <main id="childhom"  class="active" style="margin-bottom: .9em;">
+        <h2>Children's home</h2>
+        <p style="font-weight: bold;">Ananda Marga Children’s Home in head quarter in Nairobi</p>
+        <div id="ch">
+        <button id="oneb" class="tog">know more...</button>
+
+
+          <div id="one" >
+          <div id="about" class="section flx">
+            <div class="item">
+              <p>Ananda Marga Children’s Home in head quarter in Nairobi for 20 children.</p>
+              <p>Ananda Marga Children’s Home in Mombasa for 24 children</p>
+            </div>
+            <div class="item">
+              <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+      </main>
+      <main id="missionschool"  class="active">
+        <h2>mission school</h2>
+        <p style="font-weight: bold;">The school program is a  service to humanity's future. Weat Anand Marga believe the future are the children and to succeed education is the key.</p>
+        <div id="ms">
+          <button id="twob" class="tog">Know more...</button>
+        <div id="two">
+          <div id="about" class="section flx">
+            <div class="item">
+              <p>Ananda Marga Academy(Primary School ) in Kangemi with 345 children.</p>
+              <p>Ananda Marga Academy(High school) in Kangemi with 201 children.</p>
+              <p>Ananda Marga Academy in Njiru 26 children.</p>
+              <p>Ananda Marga Academy in Huruma for WWD department- 400 children.</p>
+              <p>Ananda Marga Academy in Sodom for WWD department:21 children.</p>
+              <p>HIV/Aids day care center in Nairobi with 112 children</p>
+            </div>
+            <div class="item">
+              <p>Ananda Marga Education Center in Kangemi for WWD department: 150 children.</p>
+              <p>Ananda Marga Academy in Ruai for WWD department: 15 children.</p>
+              <p>Ananda Marga Academy in Nakuru for WWD department: 140 children.</p>
+              <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+              <p>Ananda Marga Academy in Kiembeni in Mombasa for WWD department 420 children.</p>
+              <p>AMURT Likoni Primary School for 600 children.</p>
             </div>
           </div>
         </div>
 
+        </div>
+
       </main>
-      <main id="twom"  class="active">
-        <button id="twob" class="tog">Click to view and hide project 2</button>
-        <div id="two" class='photo-grid-container'>
+
+      <main id="healthprog"  class="active">
+        <h2>health program</h2>
+        <p style="font-weight: bold;">We offer health services at  AMURT health Care Center, head quarter in Nairobi.</p>
+        <div id="hp">
+          <button id="fourb" class="tog">Know more...</button>
+        <div id="four">
           <div id="about" class="section flx">
             <div class="item">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero cupiditate deserunt earum, fuga, ab labore esse animi, nihil est tenetur non delectus perferendis. Maxime accusamus ea rem sint at!</p>
+              <p>AMURT health Care Center in head quarter in Nairobi.</p>
+              <p>AMURT Health Care Centre at Likoni in Mombsa.</p>
+              <p>AMURT Health Care Center in Malindi.</p>
+              <p>AMURT project in Samburu.</p>
             </div>
             <div class="item">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
+              <h3>Proposed projects</h3>
+              <p>Proposed Ananda Marga Mission clinic in Githurai-44.</p>
+              <p></p>
             </div>
           </div>
         </div>
 
+        </div>
+
       </main>
+    </div>
+
+    <div id="donate" class="section flx">
+      <div class="item paypal">
+        <h2 class="donate-header" style="text-transform:uppercase;">PayPal</h2>
+        <div id="cmtlist">
+          <p>Donate through PayPal</p>
+          <button class="PP" style="width: 39%; height:3em; border-radius:.3em;  background-color: rgba(39, 52, 106,.6); color:#fff; text-align:center;"><a href="www.paypal.com" class="entypo-paypal"></a>PayPal</button>
+          <p>Thank,you</p>
+        </div>
+      </div>
+      <div class="item mobile">
+        <h2 class="donate-header" style="text-transform:uppercase;">Donate through mobile payment</h2>
+        <div id="cmtlist">
+          <p>Donate through mobile payment</p>
+          <p>Mpesa: +254724537444</p>
+        </div>
+      </div>
+      <div class="item bank">
+        <h2 class="donate-header" style="text-transform:uppercase;">Bank  donation</h2>
+        <div id="cmtlist">
+          <p>Donate through the bank</p>
+          <p>Bank Details:</p>
+          <p>A/c Name: Ananda Marga Mission</p>
+          <p>A/c No. 01129316484200</p>
+          <p>Bank: Co-operative Bank</p>
+          <p>Branch: Kangemi Branch</p>
+          <p>SWIFTBIC-KCOOKENA</p>
+          <p>Bank Address: P.O. Box:29134-00625, Nairobi</p>
+        </div>
+      </div>
     </div>
 
     <div id="contact" class="section flx">
@@ -348,33 +929,46 @@ console.log(classList);
           <input type="submit" value="Subscribe">
         </form>
       </div>
-      <div id="commentsec" class="item">
+      <div class="item">
 
-        <h4 style="text-transform:uppercase;">Comments</h4>
-        <div id="cmtlist">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
-          <!-- <button class="navbutton" onClick="clearComment()">Clear Comment</button> -->
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim sunt delectus, reiciendis omnis laudantium animi, et nulla quidem, aliquam aliquid. A consectetur deleniti voluptates eius neque, voluptate voluptatibus nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ut aspernatur omnis neque iusto. Veritatis rem ad atque optio perferendis. Dolorum qui consequatur, repellat soluta impedit porro totam molestiae sit.</p>
-        </div>
-
-        <div id="dtext" >
-          <h4 style="text-transform: uppercase;">Write Comment</h4>
-          <input id="namebox" type="text" maxlength="32" size="20" placeholder="Name" />
-          <br />
-          <textarea id="txt1" class="textbox" rows="6" placeholder="Your comment"></textarea>
-          <button class="navbutton" onClick="saveComment()">Save Comment </button>
-        </div>
-      </div>
+      <h4 style="text-transform:uppercase;"> Mission Center</h4>
+      <div id="googleMap" style=""></div>
     </div>
+  </div>
     <div id="footer" class="section flx">
       <footer style="position: relative;">
-        <h3 style="text-transform: uppercase; ">ananda marga</h3>
+        <a href="index.html" title="Ananda Marga: Meditation, Yoga and Social Service" rel="home"><h1 class="log">ANANDA MARGA<!-- <picture><img width="440" height="96" src="img/logo44096.png" class="attachment-full size-full lazyload" alt="Ananda Marga: Meditation, Yoga and Social Service" srcset="img/logo44096.png 440w, img/logo1040.png 1040w" sizes="(max-width: 440px) 100vw, 440px"/></picture> --></h1>
+        <h2 class="mot">service to humanity is service to God</h2>
+        </a>
+        <div class="connect">
+          <h2>Head Office: Ananda Marga Mission in Kenya</h2>
+          <p>Plot No 209</p>
+          <p>Mountainview Estate, Waiyaki Way</p>
+          <p>Nairobi, Kenya</p>
+          <p>P.O. Box: 70202-00400, Nairobi, Kenya</p>
+          <p>Mobile: +254724537444</p>
+          <p>Email: ssnairobi74@gmail.com</p>
+        </div>
       </footer>
     </div>
 </div>
 
+ <script>
 
+      function myMap() {
+      var mapProp= {
+        center:new google.maps.LatLng(51.508742,-0.120850),
+        zoom:5,
+        mapTypeId: 'hybrid',
+        scaleControl: true,
+        fullscreenControlOptions: {
+          position: google.maps.ControlPosition.RIGHT_BOTTOM
+          },
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8m-GFdkqBqDSVnNQAhXGLGlrN3pDiEAA&callback=myMap"></script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script  src="js/amm.js"></script>

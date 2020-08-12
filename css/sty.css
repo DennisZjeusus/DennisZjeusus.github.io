@@ -1,5 +1,6 @@
-/* Code By Webdevtrick ( https://webdevtrick.com ) */
+
 * {
+  scroll-behavior: smooth;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -13,6 +14,10 @@
 
 html {
   line-height: 1;
+}
+
+a{
+  text-decoration:none;
 }
 
 ol, ul {
@@ -58,12 +63,15 @@ body {
   overflow: hidden;
 }
 
-header {
-  align-items: center;
+header, footer{
   width: 100%;
   height: 39%;
-  background-color: rgba(255, 255, 255, 1.8);
+}
+
+header{
+  align-items: center;
   text-align: center;
+  background-color: rgba(255, 255, 255, 1.8);
   position: relative;
   position: fixed;
   top: 0;
@@ -72,19 +80,29 @@ header {
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  z-index: 1;
+  z-index: 2;
 }
-header h1 {
-  font-size: 42px;
-  color: #fff;
-  line-height: 4.5em;
+
+header a, footer a{
+  text-decoration:none;
+  line-height: 1.2;
+}
+
+footer a{
+  text-align: left;
+}
+
+header a h1, footer a h1{
+  /*font-size: 42px;*/
+  color:coral;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 100%;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 header nav {
   position: absolute;
   bottom: 0;
@@ -94,7 +112,7 @@ header nav {
   background-color: rgba(255, 102, 0, 1.8);
 }
 header nav a {
-  color: #fff;
+  color: white;
   display: inline-block;
   padding: 10px 15px;
   line-height: 1;
@@ -102,18 +120,17 @@ header nav a {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  font-size: 1.2em;
 }
+
 header nav a:hover {
-  -moz-box-shadow: 0 0 0 1px #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff;
+  background-color: #3e8e41;
 }
 
 h2 {
   font-size: 34px;
   text-transform: uppercase;
   font-weight: 100;
-  line-height: 2;
   color: #2c3e50;
 }
 
@@ -183,26 +200,28 @@ p {
 body.sticky-header {
   padding-top: 2.7%;
 }
+
 body.sticky-header header {
-  height: 27%;
+  height: 33%;
   background-color: rgba(255, 255, 0, 0.9);
 }
+
+body.sticky-header header a {
+  /*font-size: 42px;*/
+  /*color: #fff;*/
+  line-height: 1.2;
+}
+
+/*body.sticky-header header a h1{
+  color: #fff;
+}
+*/
 /*body.sticky-header header h1 {
   -moz-transform: scale(0, 0);
   -ms-transform: scale(0, 0);
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
 }*/
-
-#home
-{
-  height: 100vh;
-}
-
-#gallery
-{
-  height: 100vh;
-}
 
 .flx{
   display: flex;
@@ -214,6 +233,10 @@ body.sticky-header header {
 
 #about
 {
+  align-items: unset;
+  justify-content: unset;
+  text-align: left;
+  line-height: 1.2em;
   background-color:  rgba(255, 165, 0, 0.9);
 }
 
@@ -222,10 +245,14 @@ body.sticky-header header {
 }
 
 .item {
+  /*align-items: unset;
+  justify-content: unset;
+  text-align: left;*/
+  line-height: 1.2em;
   flex-grow: 1;
   flex-basis: 300px;
   width: 33%;
-  margin-left: 3.9em;
+  /*margin-left: 3.9em;*/
 }
 
 /*    .item + .item {
@@ -276,7 +303,7 @@ body.sticky-header header {
     input[type="submit"]{
       vertical-align: top;
       height: 1.8em;
-      width:50%;
+      width:10vh;
       margin: 0;
       padding: 0;
       border: 0;

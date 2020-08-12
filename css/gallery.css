@@ -1,0 +1,136 @@
+#gallery {
+  margin: 0;
+  background-color: #000;
+}
+
+.gheader{
+  font-family: Arial;
+  color: rgba(255, 255, 0, 0.9);
+  text-align: center;
+  text-transform:uppercase;
+}
+.wrapper{
+  padding-left: .9em;
+  padding-right: .9em;
+  width: 100vw;
+  display: grid;
+  overflow:hidden;
+  scroll-behavior: smooth;
+}
+
+#gamm{
+
+  grid-template-columns: repeat(2,100%);
+
+}
+
+#gfp{
+
+  grid-template-columns: repeat(2,100%);
+
+}
+
+#gms{
+
+  grid-template-columns: repeat(1,100%);
+
+}
+
+#gms{
+
+  grid-template-columns: repeat(2,100%);
+
+}
+
+.wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    margin: 20px 0;
+}
+
+#gamm section{
+    grid-template-columns: repeat(3, auto);
+
+}
+
+#gfp section{
+
+    grid-template-columns: repeat(4, auto);
+
+}
+
+#gfp #section5{
+
+    grid-template-columns: repeat(3, auto);
+
+}
+
+#gch section{
+
+    grid-template-columns: repeat(3, auto);
+
+}
+
+#gms section{
+
+    grid-template-columns: repeat(3, auto);
+
+}
+
+#gms #section9{
+
+    grid-template-columns: repeat(2, auto);
+
+}
+
+.gitem {
+  width: 100%;
+  height:auto;
+  align-items:center;
+  justify-content:center;
+  padding: 0 2px;
+  transition: 250ms all;
+}
+
+.gitem img{
+    width: 100%;
+    height:auto;
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.gitem:hover {
+        margin: 0 40px;
+        transform: scale(1.2);
+      }
+
+section a {
+      position: absolute;
+      color: #fff;
+      text-decoration: none;
+      font-size: 6em;
+      background:rgb(0,0,0);
+      width: 80px;
+      padding: 20px;
+      text-align: center;
+      z-index: 1;
+}
+
+section a:nth-of-type(1) {
+        top:0; bottom:0; left:0;
+        background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+      }
+section a:nth-of-type(2) {
+        top:0; bottom:0; right: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+      }
+
+
+// Remove the arrow for Mobile
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display:none;
+  }
+}
+

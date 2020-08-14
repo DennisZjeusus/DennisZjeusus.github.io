@@ -15,11 +15,11 @@
     -o-animation: slider 18s infinite;
     -ms-animation: slider 18s infinite;
     animation: slider 18s infinite;
-    -webkit-animation-delay: 8.1s;
-    -moz-animation-delay: 8.1s;
-    -o-animation-delay: 8.1s;
-    -ms-animation-delay: 8.1s;
-    animation-delay: 8.1s;
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
 }
 
 #img-slider img {

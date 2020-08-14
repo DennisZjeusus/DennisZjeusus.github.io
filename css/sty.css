@@ -1,6 +1,7 @@
 
 * {
   scroll-behavior: smooth;
+  scroll-snap-type:y mandatory;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -60,17 +61,15 @@ body {
   -o-transition: padding-top 0.5s ease;
   -webkit-transition: padding-top 0.5s ease;
   transition: padding-top 0.5s ease;
-  overflow: hidden;
-}
-
-header, footer{
-  width: 100%;
-  height: 27%;
+  overflow: auto;
 }
 
 header{
-  align-items: center;
-  text-align: center;
+  width: 100%;
+  height: 30%;
+}
+
+header{
   background-color: lightyellow;
   position: relative;
   position: fixed;
@@ -84,13 +83,15 @@ header{
   padding-bottom: 1em;
 }
 
+header .flx, footer .flx{
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+}
+
 header a, footer a{
   text-decoration:none;
   line-height: 1.2;
-}
-
-footer a{
-  text-align: left;
 }
 
 header a h1, footer a h1{
@@ -105,13 +106,22 @@ header a h1, footer a h1{
 }
 
 header nav {
-  position: absolute;
-  bottom: 0;
+  text-align: center;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  top: 0;
   height: 60px;
-  line-height: 60px;
+  /*line-height: 60px;*/
   width: 100%;
   background-color: rgba(255, 102, 0, 1.8);
+  font-size: 12px;
+  box-shadow: 0 1px 2px rgba(19, 51, 61, 0.5);
+  /*margin: 3em 0 6em;*/
+  height: 44px; /* Menu height */
+   overflow: hidden; /* Don't show anything outside the nav */
 }
+
 header nav a {
   color: white;
   display: inline-block;
@@ -124,7 +134,7 @@ header nav a {
   font-size: 1.2em;
 }
 
-header nav a:hover {
+header nav li:hover {
   background-color: #3e8e41;
 }
 
@@ -136,7 +146,7 @@ h2 {
 }
 
 p {
-  margin-bottom: 2rem;
+  /*margin-bottom: 2rem;*/
   line-height: 2;
   color: #7f8c8d;
 }
@@ -147,6 +157,8 @@ p {
   min-height: 0;
   display:flex;
   flex-flow: column;
+  margin-bottom:0;
+  bottom: 0;
 
 }
 
@@ -154,21 +166,23 @@ p {
 {
   position: relative;
   width:100%;
-  max-height:100vh;
+  /*max-height:100vh;*/
   scroll-behavior: smooth;
-  overflow: auto;
+  overflow:hidden;
   scroll-snap-type:y mandatory;
+  z-index: 4;
 
 }
 
-.container::-webkit-scrollbar {
+/*.container::-webkit-scrollbar {
     display: none;
-}
+    z-index:4;
+}*/
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  /*-ms-overflow-style: none;*/  /* IE and Edge */
+  /*scrollbar-width: none;*/  /* Firefox */
 }
 
 /*section {
@@ -193,7 +207,7 @@ p {
   width:100vw;
   position: relative;
   scroll-snap-align:start;
-  padding-top: 27em;
+  /*padding-top: 27em;*/
   /*margin-bottom: .9em;*/
 }
 
@@ -203,8 +217,12 @@ body.sticky-header {
 }
 
 body.sticky-header header {
-  height: 33%;
-  background-color: rgba(255, 255, 0, 0.78);
+  height: 30%;
+  background-color: cornsilk;
+}
+
+body.sticky-header .wraper #footer {
+  position: sticky;
 }
 
 body.sticky-header header a {
@@ -232,6 +250,27 @@ body.sticky-header header a {
   flex-flow:row;
 }
 
+.flx-con{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  flex-flow:row;
+}
+
+.flx-con .item a{
+  display: flex;
+  color: coral;
+}
+
+.flx-con .item a:before{
+  width:2em;
+}
+
+.flx-con .item p {
+  text-align: left;
+}
+
 #home{
   line-height: 1em;
   height:100vh;
@@ -250,6 +289,16 @@ body.sticky-header header a {
 #about p{
   font-size: .9em;
   color: navy;
+}
+
+.item-head {
+  /*align-items: unset;
+  justify-content: unset;
+  text-align: left;*/
+  /*line-height: 1.2em;*/
+  flex-grow: 1;
+  width: 100%;
+  /*margin-left: 3.9em;*/
 }
 
 .item {
@@ -314,7 +363,7 @@ align-items: start;
     input[type="submit"]{
       vertical-align: top;
       height: 1.8em;
-      width:10vh;
+      width:18vh;
       margin: 0;
       padding: 0;
       border: 0;

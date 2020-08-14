@@ -3,6 +3,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>AMM | ANANDA MARGA</title>
 
@@ -20,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="css/ico.css">
   <link rel="stylesheet" type="text/css" href="css/slide.css">
   <link rel="stylesheet" type="text/css" href="css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="css/navigation.css">
   <link rel="stylesheet" type="text/css" href="css/dropdown.css">
   <link rel="stylesheet" type="text/css" href="css/card.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -64,8 +66,17 @@ header nav a, footer nav a{
   transition: all 0.3s ease;
 }
 
+/*.ico a{
+ color: coral;
+ width: 100%;
+}*/
+
 .connect h2{
     font-size: 1.5em;
+}
+
+.imagine{
+  margin-top: 18%;
 }
 
 .connect p
@@ -94,10 +105,17 @@ header nav a, footer nav a{
 }
 
 #donate div{
+  align-items: unset;
+  justify-content: unset;
+  text-align: left;
+
+}
+
+#donate .item{
   padding:.33em;
   width:96%;
-  margin:0;
-}
+  margin:3%;
+  }
 
 .donate-header{
     width:100%;
@@ -113,7 +131,7 @@ header nav a, footer nav a{
 }
 
 #donate h2{
-  line-height: 1.2em;
+  line-height: 1em;
 }
 
 #cmtlist p{
@@ -149,18 +167,15 @@ header nav a, footer nav a{
   width: 100%;
   height: auto;
   z-index: 1;
-  background-color: gainsboro;
+  background-color: darkslategrey;
   bottom: 0;
   padding-top: 0;
   padding-bottom: 1em;
+  padding-left: 1em;
 }
 
 @media screen and (max-width:1620px)
 {
-header a{
-  text-align: left;
-  /*float:left;*/
-}
 
 .mot{
   font-size: 1.8em;
@@ -181,33 +196,52 @@ header a{
 
 @media screen and (max-width:1107px)
 {
-    .section{
+   /* .section{
     padding-top: 39.9%;
+  }*/
+
+  header{
+    height: 42%;
   }
 
-  #home{
-    height: 100%;
+  .imagine{
+    margin-top: 30%;
   }
 
   .log{
 
     font-size:1.8em;
   }
+
   .mot{
-    font-size: 1.2em;
+    font-size: .9em;
+  }
+
+  .flx-con .item p{
+    font-size: .54em;
+    line-height: 1;
+  }
+
+  #home{
+    height: 100%;
   }
 
  body.sticky-header header {
-    height: 33%;
+    height: 24%;
   }
 
-  body.sticky-header header .log{
+  body.sticky-header header #connect {
+    display:none;
+  }
+
+
+  /*body.sticky-header header .log{
     font-size:1.8em;
-  }
+  }*/
 
-  body.sticky-header header .mot{
+  /*body.sticky-header header .mot{
     font-size:.1.2em;
-  }
+  }*/
 
 #about, #donate
 {
@@ -216,17 +250,19 @@ header a{
   text-align: center;
 }
 
+
+#about .sec{
+  border:none;
+}
+
 #cmtlist button{
   position: relative;
 }
 
-  header, footer{
-    height:36%;
-  }
-
-  header a, footer a{
+  header a{
     text-align: center;
     /*float:left;*/
+    width: 100%;
   }
 
   .cards{
@@ -262,43 +298,63 @@ header a{
 }
 }
 
-@media screen and (max-height:877px)
+
+
+@media screen and (max-height:639px)
 {
 
-  header, footer{
-    height:42%;
-  }
-
-  header, footer{
+  @media screen and (max-width:529px)
+  {
+    header{
     height:240px;
   }
 
-  body.sticky-header header {
-    height: 240px;
   }
+
+
+  header #connect{
+    display: none;
+  }
+
+  #footer {
+    position: sticky;
+    /*height:255px;*/
+  }
+
+  /*body.sticky-header header {
+    height: 240px;
+  }*/
 }
 
 @media screen and (max-width:859px)
 {
 
-  header, footer {
+  .log{
+
+    font-size:1.5em;
+  }
+
+  .imagine{
+    margin-top: 45%;
+  }
+
+  #about p{
+    font-size:.6em;
+  }
+
+  .item p{
+    font-size: .6em;
+  }
+
+  /*header, footer {
     height: 33%;
   }
-
-  header nav a, nav .dropbtn {
-    font-size: .6em;
-    padding:. .3em;
-  }
-
-  .log{
-    font-size:2.1em;
-  }
-
+*/
   .connect{
     line-height: 1.32em;
   }
 
-  .connect h2{
+  /*.connect h2{
     font-size:.9em;
   }
 
@@ -306,11 +362,11 @@ header a{
   {
     font-size: .6em;
 
-  }
+  }*/
 
-  .section{
+  /*.section{
     padding-top: 51%;
-  }
+  }*/
 
   .cards {
     padding:0;
@@ -319,25 +375,21 @@ header a{
 
 @media screen and (max-width:567px)
 {
-  header, footer {
+  /*header, footer {
     height: 36%;
-  }
+  }*/
 
-  body.sticky-header header {
+  /*body.sticky-header header {
     height: 33%;
-  }
+  }*/
 
   body.sticky-header header .log{
     font-size:1.5em;
   }
 
-  .log{
-    font-size: 1em;
-  }
-
-  .section{
+  /*.section{
     padding-top: 36vh;
-  }
+  }*/
 
   .form-news, #googleMap{
   width:25vh;
@@ -346,29 +398,43 @@ header a{
 }
 
 
-@media screen and (max-width:521px)
+@media screen and (max-width:529px)
 {
 
-  header, footer {
-    height: 37.2%;
+  .imagine{
+    margin-top: 57%;
   }
 
-  body.sticky-header header {
+  header #connect{
+    display:none;
+  }
+
+  header  .log{
+    font-size:1.2em;
+  }
+
+  /*body.sticky-header header {
     height: 39%;
+  }*/
+  body.sticky-header header {
+    height: 240px;
   }
-
   .connect h2, .connect p {
     font-size:.6em;
   }
 
-  .log{
-    font-size:1.5em;
-  }
+  body.sticky-header .wraper #footer {
+    position: relative;
+    }
 
-  .mot{
-    font-size: .9em;
-  }
-
+}
+.section::before {
+  display: block;
+  content: " ";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 
@@ -376,6 +442,7 @@ header a{
 
   <script>
 $(document).ready(function(){
+
 
 $('#threeb').on('click', function () { /* do stuff */
   // Get class list string
@@ -503,44 +570,66 @@ console.log(classList);
 });
 </script>
 </head>
-<body>
+<body class="contain">
 <div id="contain" class="container">
   <header>
-      <a href="index.html" title="Ananda Marga: Meditation, Yoga and Social Service" rel="home"><h1 class="log">ANANDA MARGA<!-- <picture><img width="440" height="96" src="img/logo44096.png" class="attachment-full size-full lazyload" alt="Ananda Marga: Meditation, Yoga and Social Service" srcset="img/logo44096.png 440w, img/logo1040.png 1040w" sizes="(max-width: 440px) 100vw, 440px"/></picture> --></h1>
-      <h2 class="mot">service to humanity is service to God</h2>
-      </a>
-      <div class="connect">
-        <h2>Head Office: Ananda Marga Mission in Kenya</h2>
-        <p>Plot No 209</p>
-        <p>Mountainview Estate, Waiyaki Way</p>
-        <p>Nairobi, Kenya</p>
-        <p>P.O. Box: 70202-00400, Nairobi, Kenya</p>
-        <p>Mobile: +254724537444</p>
-        <p>Email: ssnairobi74@gmail.com</p>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <div class="dropdown">
-          <a class="dropbtn" href="#gallery">Gallery</a>
-          <div class="dropdown-content">
-            <a href="#gamm">Ananda Headquaters</a>
-            <a href="#gfp">Food Program</a>
-            <a href="#gch">Children's Home</a>
-            <a href="#gms">Mission Scchool</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a class="dropbtn" href="#projects">Projects</a>
-          <div class="dropdown-content">
-            <a href="#foodprog">Food Program</a>
-            <a href="#childhom">Children's Home</a>
-            <a href="#missionschool">Mission School</a>
-            <a href="#healthprog">Health Program</a>
-          </div>
-        </div>
-        <a href="#donate">Donate</a>
-        <a href="#contact">Contact</a>
+    <nav id="menu">
+        <ul id="menu-closed">
+          <li onclick="navb('homerb')" id="homerb" class="navb"><a  class="entypo-home" href="#home">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <span onclick="navb(null)" class=" navb"><a class=" dropbtn" href="#projects">Projects</a></span>
+              <div class="dropdown-content">
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#foodprog">Food Program</a></span>
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#childhom">Children's Home</a></span>
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#missionschool">Mission School</a></span>
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#healthprog">Health Program</a></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <span onclick="navb(null)" class=" navb"><a class="navb dropbtn" href="#gallery">Gallery</a></span>
+              <div class="dropdown-content">
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#gamm">Ananda Headquaters</a></span>
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#gfp">Food Program</a></span>
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#gch">Children's Home</a></span>
+                <span onclick="navb(null)" class=" navb"><a class="navb" href="#gms">Mission Scchool</a></span>
+              </div>
+            </div>
+          </li>
+          <li onclick="navb(null)" class="navb"><a href="#donate">Donate</a></li>
+          <li onclick="navb(null)" class="navb"><a class="entypo-chat  " href="#contact">Contact</a></li>
+          <li><a href="#menu-closed">&#215; Close menu</a></li>
+          <li><a href="#menu">&#9776; Menu</a></li>
+        </ul>
       </nav>
+    <div id="header" >
+      <div class=" flx">
+          <a class="item-head" href="index.html" title="Ananda Marga: food program, health program, mission school and children's home" rel="home"><h1 class="log">ANANDA MARGA<!-- <picture><img width="440" height="96" src="img/logo44096.png" class="attachment-full size-full lazyload" alt="Ananda Marga: Meditation, Yoga and Social Service" srcset="img/logo44096.png 440w, img/logo1040.png 1040w" sizes="(max-width: 440px) 100vw, 440px"/></picture> --></h1>
+          <h2 class="mot">service to humanity is service to God</h2>
+          </a>
+          <div id="connect" class="item-head flx-con">
+
+            <div class="item">
+
+              <a class="entypo-location"><span><p>Head Office: Ananda Marga Mission in Kenya</p></span></a>
+              <p>Plot No 209</p>
+              <p>Mountainview Estate, Waiyaki Way</p>
+              <p>Nairobi, Kenya</p>
+            </div>
+
+            <div class="item">
+
+              <a class="entypo-mobile"><span><p>Mobile: +254724537444</p></span></a>
+              <a class="entypo-address"><span><p>P.O. Box: 70202-00400, Nairobi, Kenya</p></span></a>
+              <a class="entypo-mail"><span><p>Email: ssnairobi74@gmail.com</p></span></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
   </header>
   <ul id="social-sidebar" style="z-index: 2;">
       <li>
@@ -575,333 +664,352 @@ console.log(classList);
       </li> -->
     </ul>
   <div class="wraper">
-    <div id="home" class="section flx">
-      <div  class="item">
-        <div id="slider">
-        <div id="img-slider">
-         <img src="img/home/IMG-20200811-WA0017.jpg" class="lazyload" alt="home"/>
-         <img src="img/foodprogram/IMG-20200811-WA0006.jpg" class="lazyload" alt="food program"/>
-         <img src="img/childhome/IMG-20200811-WA0007.jpg" class="lazyload" alt="children's home picture" />
-         <img src="img/missionschool/IMG-20200811-WA0013.jpg" class="lazyload" alt="mission school"/>
-         <img src="img/home/IMG-20200811-WA0021.jpg" class="lazyload" alt="home" />
+    <div id="home" class="section ">
+      <div id="homer" class=" flx">
+        <div  class="item">
+          <div id="slider">
+            <div id="img-slider">
+             <img src="img/home/IMG-20200811-WA0017.jpg" class="lazyload" alt="home"/>
+             <img src="img/foodprogram/IMG-20200811-WA0006.jpg" class="lazyload" alt="food program"/>
+             <img src="img/childhome/IMG-20200811-WA0007.jpg" class="lazyload" alt="children's home picture" />
+             <img src="img/missionschool/IMG-20200811-WA0013.jpg" class="lazyload" alt="mission school"/>
+             <img src="img/home/IMG-20200811-WA0021.jpg" class="lazyload" alt="home" />
+            </div>
         </div>
-      </div>
-
-      </div>
-      <div class="item" class="ananda">
-        <h2>Ananda Marga Mission in Kenya</h2>
-        <p>Ananda Marga Mission, we are a foundation of people serving the people. We believe service to humanity is service to God. We serve humanity through our Food Distribution Program, the Children's Home Program, moreover building a better future through our Mission School Program, We welcome you to help humanity.</p>
-        <button class="more"><a href="#projects">Know more...</a></button>
-      </div>
-    </div>
-
-    <div id="gallery" class="section">
-
-      <h1 class="gheader">Ananda Marga Mission</h1>
-      <div id="gamm" class="wrapper">
-        <section id="section1">
-          <a href="#section2">‹</a>
-            <div class="gitem">
-              <picture><img src="img/home/IMG-20200811-WA0017.jpg" class="lazyload" alt="home" sizes=""/></picture>
-            </div>
-            <div class="gitem">
-              <picture><img src="img/home/IMG-20200811-WA0018.jpg" class="lazyload" alt="home" sizes=""/></picture>
-            </div>
-            <div class="gitem">
-              <picture><img src="img/home/IMG-202008112-WA0010.jpg" class="lazyload" alt="home" sizes=""/></picture>
-            </div>
-          <a href="#section2">›</a>
-        </section>
-        <section id="section2">
-          <a href="#section1">‹</a>
-
-              <div class="gitem">
-              <picture><img src="img/home/IMG-20200811-WA0022.jpg" class="lazyload" alt="home" sizes=""/></picture>
-            </div>
-            <div class="gitem">
-              <picture><img src="img/home/IMG-202008112-WA0019.jpg" class="lazyload" alt="home" sizes=""/></picture>
-            </div>
-            <div class="gitem">
-              <picture><img src="img/home/IMG-20200811-WA0021.jpg" class="lazyload" alt="home" sizes=""/></picture>
-            </div>
-          <a href="#section1">›</a>
-        </section>
-      </div>
-      <br/>
-      <h1 class="gheader">Ananda Marga Mission Food Program</h1>
-      <div id="gfp" class="wrapper">
-        <section id="section4">
-          <a href="#section5">‹</a>
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0011.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0012.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0006.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-
-            </div>
-
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0023.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-            </div>
-          <a href="#section5">›</a>
-        </section>
-        <section id="section5">
-          <a href="#section4">‹</a>
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0020.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0008.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-
-            </div>
-
-            <div class="gitem">
-              <picture><img src="img/foodprogram/IMG-20200811-WA0009.jpg" class="lazyload" alt="food program" sizes=""/></picture>
-
-            </div>
-
-          <a href="#section4">›</a>
-        </section>
-
-      </div>
-      <br/>
-      <h1 class="gheader">Ananda Marga Children's Home</h1>
-      <div id="gch" class="wrapper">
-        <section id="section7">
-          <a href="#section7">‹</a>
-            <div class="gitem">
-              <picture><img src="img/childhome/IMG-20200811-WA0007.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/childhome/IMG-20200811-WA0024.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/childhome/IMG-20200811-WA0025.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
-            </div>
-          <a href="#section7">›</a>
-        </section>
-
-      </div>
-      <br/>
-
-      <h1 class="gheader">Ananda Marga Mission School</h1>
-      <div id="gms" class="wrapper">
-        <section id="section8">
-          <a href="#section9">‹</a>
-            <div class="gitem">
-              <picture><img src="img/missionschool/IMG-20200811-WA0026.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/missionschool/IMG-20200811-WA0016.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/missionschool/IMG-20200811-WA0014.jpg" class="lazyload" alt="mission school" srcset="" sizes=""/></picture>
-
-            </div>
-          <a href="#section9">›</a>
-        </section>
-        <section id="section9">
-          <a href="#section8">‹</a>
-            <div class="gitem">
-              <picture><img src="img/missionschool/IMG-20200811-WA0013.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
-
-            </div>
-            <div class="gitem">
-              <picture><img src="img/missionschool/IMG-20200811-WA0015.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
-            </div>
-          <a href="#section8">›</a>
-        </section>
+        </div>
+        <div class="item" class="ananda">
+          <h2>Ananda Marga Mission in Kenya</h2>
+          <p>Ananda Marga Mission, we are a foundation of people serving the people. We believe service to humanity is service to God. We serve humanity through our Food Distribution Program, the Children's Home Program, moreover building a better future through our Mission School Program, We welcome you to help humanity.</p>
+          <button class="more"><a href="#projects">Know more...</a></button>
+        </div>
       </div>
     </div>
 
     <div id="projects" class="section">
+      <div class="imagine">
+        <ul class="cards">
+          <li id="foodprog" class="active cards__item">
+            <div class="card">
+              <div class="card__image card__image--fp"></div>
+              <div class="card__content">
+                <div class="card__title"><h2>food program</h2></div>
+                <p class="card__text" style="font-weight: bold;">Food distribution program at the headquater at Ananda Marga Mission head quarter in Nairobi</p>
 
-      <ul class="cards">
-        <li id="foodprog" class="active cards__item">
-          <div class="card">
-            <div class="card__image card__image--fp"></div>
-            <div class="card__content">
-              <div class="card__title"><h2>food program</h2></div>
-              <p class="card__text" style="font-weight: bold;">Food distribution program at the headquater at Ananda Marga Mission head quarter in Nairobi</p>
-
-              <div id="three">
-                <div id="about" class=" flx">
-                  <div class="item">
-                    <p>Every Sunday Food distribution program to 3,000 people, from 7.00 to 10.00 am at Ananda Marga Mission head quarter in Nairobi.</p>
-                    <p>Every Sunday Feeding program to 1000 children at Ananda Marga Mission head quarter in Nairobi, from 1,00 to 2.00 pm in Nairobi.</p>
-                  </div>
-                  <div class="item">
-                    <p>Ananda Marga Academy(Primary School ) in Kangemi. We provide free breakfast and lunch to all children and dinner to the class-8 candidates.</p>
-                    <p>Ananda Marga Academy(High school) in Kangemi. We provide free breakfast, lunch and dinner to all the children.</p>
-                    <p>Ananda Marga School in Githurai 45. We provide free breakfast and lunch to all the children.</p>
+                <div id="three">
+                  <div id="about" class=" flx">
+                    <div class="item">
+                      <p>Every Sunday Food distribution program to 3,000 people, from 7.00 to 10.00 am at Ananda Marga Mission head quarter in Nairobi.</p>
+                      <p>Every Sunday Feeding program to 1000 children at Ananda Marga Mission head quarter in Nairobi, from 1,00 to 2.00 pm in Nairobi.</p>
+                    </div>
+                    <div class="item sec">
+                      <p>Ananda Marga Academy(Primary School ) in Kangemi. We provide free breakfast and lunch to all children and dinner to the class-8 candidates.</p>
+                      <p>Ananda Marga Academy(High school) in Kangemi. We provide free breakfast, lunch and dinner to all the children.</p>
+                      <p>Ananda Marga School in Githurai 45. We provide free breakfast and lunch to all the children.</p>
+                    </div>
                   </div>
                 </div>
+                <button id="threeb" class="btn btn--block card__btn">Read more...</button>
               </div>
-              <button id="threeb" class="btn btn--block card__btn">Read more...</button>
             </div>
-          </div>
-        </li>
-        <br/>
-        <li id="childhom" class="active cards__item">
-          <div class="card">
-            <div class="card__image card__image--ch"></div>
-            <div class="card__content">
-              <div class="card__title"><h2>Children's home</h2></div>
-              <p class="card__text" style="font-weight: bold;">Ananda Marga Children’s Home in head quarter in Nairobi</p>
+          </li>
+          <br/>
+          <li id="childhom" class="active cards__item">
+            <div class="card">
+              <div class="card__image card__image--ch"></div>
+              <div class="card__content">
+                <div class="card__title"><h2>Children's home</h2></div>
+                <p class="card__text" style="font-weight: bold;">Ananda Marga Children’s Home in head quarter in Nairobi</p>
 
-              <div id="one" >
-                <div id="about" class=" flx">
-                  <div class="item">
-                    <p>Ananda Marga Children’s Home in head quarter in Nairobi for 20 children.</p>
-                    <p>Ananda Marga Children’s Home in Mombasa for 24 children</p>
-                  </div>
-                  <div class="item">
-                    <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+                <div id="one" >
+                  <div id="about" class=" flx">
+                    <div class="item">
+                      <p>Ananda Marga Children’s Home in head quarter in Nairobi for 20 children.</p>
+                      <p>Ananda Marga Children’s Home in Mombasa for 24 children</p>
+                    </div>
+                    <div class="item sec">
+                      <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+                    </div>
                   </div>
                 </div>
+                <button id="oneb" class="btn btn--block card__btn ">Read more...</button>
               </div>
-              <button id="oneb" class="btn btn--block card__btn ">Read more...</button>
             </div>
-          </div>
-        </li>
-        <br/>
-        <li id="missionschool" class="active cards__item">
-          <div class="card">
-            <div class="card__image card__image--ms"></div>
-            <div class="card__content">
-              <div class="card__title"><h2>mission school</h2></div>
-              <p class="card__text" style="font-weight: bold;">The school program is a  service to humanity's future. Weat Anand Marga believe the future are the children and to succeed education is the key.</p>
+          </li>
+          <br/>
+          <li id="missionschool" class="active cards__item">
+            <div class="card">
+              <div class="card__image card__image--ms"></div>
+              <div class="card__content">
+                <div class="card__title"><h2>mission school</h2></div>
+                <p class="card__text" style="font-weight: bold;">The school program is a  service to humanity's future. Weat Anand Marga believe the future are the children and to succeed education is the key.</p>
 
-              <div id="two">
-                <div id="about" class=" flx">
-                  <div class="item">
-                    <p>Ananda Marga Academy(Primary School ) in Kangemi with 345 children.</p>
-                    <p>Ananda Marga Academy(High school) in Kangemi with 201 children.</p>
-                    <p>Ananda Marga Academy in Njiru 26 children.</p>
-                    <p>Ananda Marga Academy in Huruma for WWD department- 400 children.</p>
-                    <p>Ananda Marga Academy in Sodom for WWD department:21 children.</p>
-                    <p>HIV/Aids day care center in Nairobi with 112 children</p>
-                  </div>
-                  <div class="item">
-                    <p>Ananda Marga Education Center in Kangemi for WWD department: 150 children.</p>
-                    <p>Ananda Marga Academy in Ruai for WWD department: 15 children.</p>
-                    <p>Ananda Marga Academy in Nakuru for WWD department: 140 children.</p>
-                    <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
-                    <p>Ananda Marga Academy in Kiembeni in Mombasa for WWD department 420 children.</p>
-                    <p>AMURT Likoni Primary School for 600 children.</p>
+                <div id="two">
+                  <div id="about" class=" flx">
+                    <div class="item">
+                      <p>Ananda Marga Academy(Primary School ) in Kangemi with 345 children.</p>
+                      <p>Ananda Marga Academy(High school) in Kangemi with 201 children.</p>
+                      <p>Ananda Marga Academy in Njiru 26 children.</p>
+                      <p>Ananda Marga Academy in Huruma for WWD department- 400 children.</p>
+                      <p>Ananda Marga Academy in Sodom for WWD department:21 children.</p>
+                      <p>HIV/Aids day care center in Nairobi with 112 children</p>
+                    </div>
+                    <div class="item sec">
+                      <p>Ananda Marga Education Center in Kangemi for WWD department: 150 children.</p>
+                      <p>Ananda Marga Academy in Ruai for WWD department: 15 children.</p>
+                      <p>Ananda Marga Academy in Nakuru for WWD department: 140 children.</p>
+                      <p>Ananda Marga Children’s Home in Nakuru for 32 children.</p>
+                      <p>Ananda Marga Academy in Kiembeni in Mombasa for WWD department 420 children.</p>
+                      <p>AMURT Likoni Primary School for 600 children.</p>
+                    </div>
                   </div>
                 </div>
+                <button id="twob" class="btn btn--block card__btn">Read more...</button>
               </div>
-              <button id="twob" class="btn btn--block card__btn">Read more...</button>
             </div>
-          </div>
-        </li>
-        <br/>
-        <li id="healthprog" class="active cards__item">
-          <div class="card">
-            <div class="card__image card__image--hp"></div>
-            <div class="card__content">
-              <div class="card__title"><h2>health program</h2></div>
-              <p class="card__text "style="font-weight: bold;">We offer health services at  AMURT health Care Center, head quarter in Nairobi.</p>
+          </li>
+          <br/>
+          <li id="healthprog" class="active cards__item">
+            <div class="card">
+              <div class="card__image card__image--hp"></div>
+              <div class="card__content">
+                <div class="card__title"><h2>health program</h2></div>
+                <p class="card__text "style="font-weight: bold;">We offer health services at  AMURT health Care Center, head quarter in Nairobi.</p>
 
-              <div id="four">
-                <div id="about" class=" flx">
-                  <div class="item">
-                    <p>AMURT health Care Center in head quarter in Nairobi.</p>
-                    <p>AMURT Health Care Centre at Likoni in Mombsa.</p>
-                    <p>AMURT Health Care Center in Malindi.</p>
-                    <p>AMURT project in Samburu.</p>
-                  </div>
-                  <div class="item">
-                    <h3>Proposed projects</h3>
-                    <p>Proposed Ananda Marga Mission clinic in Githurai-44.</p>
-                    <p></p>
+                <div id="four">
+                  <div id="about" class=" flx">
+                    <div class="item">
+                      <p>AMURT health Care Center in head quarter in Nairobi.</p>
+                      <p>AMURT Health Care Centre at Likoni in Mombsa.</p>
+                      <p>AMURT Health Care Center in Malindi.</p>
+                      <p>AMURT project in Samburu.</p>
+                    </div>
+                    <div class="item">
+                      <h3>Proposed projects</h3>
+                      <p>Proposed Ananda Marga Mission clinic in Githurai-44.</p>
+                      <p></p>
+                    </div>
                   </div>
                 </div>
+                <button id="fourb" class="btn btn--block card__btn">Read more...</button>
               </div>
-              <button id="fourb" class="btn btn--block card__btn">Read more...</button>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <div id="gallery" class="section">
+      <div class="imagine">
+        <h2 id="gamm"></h2>
+        <h1 class="gheader">Ananda Marga Mission</h1>
+        <div class="gamm wrapper">
+          <section id="section1">
+            <a href="#section2">‹</a>
+              <div class="gitem">
+                <picture><img src="img/home/IMG-20200811-WA0017.jpg" class="lazyload" alt="home" sizes=""/></picture>
+              </div>
+              <div class="gitem">
+                <picture><img src="img/home/IMG-20200811-WA0018.jpg" class="lazyload" alt="home" sizes=""/></picture>
+              </div>
+              <div class="gitem">
+                <picture><img src="img/home/IMG-202008112-WA0010.jpg" class="lazyload" alt="home" sizes=""/></picture>
+              </div>
+            <a href="#section2">›</a>
+          </section>
+          <section id="section2">
+            <a href="#section1">‹</a>
+
+                <div class="gitem">
+                <picture><img src="img/home/IMG-20200811-WA0022.jpg" class="lazyload" alt="home" sizes=""/></picture>
+              </div>
+              <div class="gitem">
+                <picture><img src="img/home/IMG-202008112-WA0019.jpg" class="lazyload" alt="home" sizes=""/></picture>
+              </div>
+              <div class="gitem">
+                <picture><img src="img/home/IMG-20200811-WA0021.jpg" class="lazyload" alt="home" sizes=""/></picture>
+              </div>
+            <a href="#section1">›</a>
+          </section>
+        </div>
+        <h2 id="gfp"></h2>
+        <div class="imagines">
+          <h1 class="gheader">Ananda Marga Mission Food Program</h1>
+          <div class="gfp wrapper">
+            <section id="section4">
+              <a href="#section5">‹</a>
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0011.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0012.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0006.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+                </div>
+
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0023.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+                </div>
+              <a href="#section5">›</a>
+            </section>
+            <section id="section5">
+              <a href="#section4">‹</a>
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0020.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0008.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+                </div>
+
+                <div class="gitem">
+                  <picture><img src="img/foodprogram/IMG-20200811-WA0009.jpg" class="lazyload" alt="food program" sizes=""/></picture>
+
+                </div>
+
+              <a href="#section4">›</a>
+            </section>
+
+          </div>
+        </div>
+        <h2 id="gch"></h2>
+        <div class="imagines">
+          <h1 class="gheader">Ananda Marga Children's Home</h1>
+          <div class="gch wrapper">
+            <section id="section7">
+              <a href="#section7">‹</a>
+                <div class="gitem">
+                  <picture><img src="img/childhome/IMG-20200811-WA0007.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/childhome/IMG-20200811-WA0024.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/childhome/IMG-20200811-WA0025.jpg" class="lazyload" alt="children's home picture" sizes=""/></picture>
+                </div>
+              <a href="#section7">›</a>
+            </section>
+
+          </div>
+        </div>
+        <h2 id="gms"></h2>
+        <div class="imagines">
+
+          <h1 class="gheader">Ananda Marga Mission School</h1>
+          <div class="gms wrapper">
+            <section id="section8">
+              <a href="#section9">‹</a>
+                <div class="gitem">
+                  <picture><img src="img/missionschool/IMG-20200811-WA0026.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/missionschool/IMG-20200811-WA0016.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/missionschool/IMG-20200811-WA0014.jpg" class="lazyload" alt="mission school" srcset="" sizes=""/></picture>
+
+                </div>
+              <a href="#section9">›</a>
+            </section>
+            <section id="section9">
+              <a href="#section8">‹</a>
+                <div class="gitem">
+                  <picture><img src="img/missionschool/IMG-20200811-WA0013.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+
+                </div>
+                <div class="gitem">
+                  <picture><img src="img/missionschool/IMG-20200811-WA0015.jpg" class="lazyload" alt="mission school" sizes=""/></picture>
+                </div>
+              <a href="#section8">›</a>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="donate" class="section flx">
-      <div class="item paypal">
-        <h2 class="donate-header" style="text-transform:uppercase;">PayPal</h2>
-        <div id="cmtlist">
-          <p>Donate through PayPal</p>
-          <button class="PP" style="width: 39%; height:3em; border-radius:.3em;  background-color: rgba(39, 52, 106,.6); color:#fff; text-align:center;"><a href="www.paypal.com" class="entypo-paypal"></a>PayPal</button>
-          <p>Thank,you</p>
-        </div>
-      </div>
-      <div class="item mobile">
-        <h2 class="donate-header" style="text-transform:uppercase;">Donate through mobile payment</h2>
-        <div id="cmtlist">
-          <p>Donate through mobile payment</p>
-          <p>Mpesa: +254724537444</p>
-        </div>
-      </div>
-      <div class="item bank">
-        <h2 class="donate-header" style="text-transform:uppercase;">Bank  donation</h2>
-        <div id="cmtlist">
-          <p>Donate through the bank</p>
-          <p>Bank Details:</p>
-          <p>A/c Name: Ananda Marga Mission</p>
-          <p>A/c No. 01129316484200</p>
-          <p>Bank: Co-operative Bank</p>
-          <p>Branch: Kangemi Branch</p>
-          <p>SWIFTBIC-KCOOKENA</p>
-          <p>Bank Address: P.O. Box:29134-00625, Nairobi</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact" class="section flx">
-
-      <div class="item form-news" >
-        <form method="post" action="" style="">
-          <h1>Newsletter Signup</h1>
-          <p>No spam, unsubscribe at any time.</p>
-          <div class="info">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
+      <div class="imagine flx
+      ">
+        <div class="item paypal">
+          <h2 class="donate-header" style="text-transform:uppercase;">PayPal</h2>
+          <div id="cmtlist">
+            <p>Donate through PayPal</p>
+            <button class="PP" style="width: 39%; height:3em; border-radius:.3em;  background-color: rgba(39, 52, 106,.6); color:#fff; text-align:center;"><a href="www.paypal.com" class="entypo-paypal"></a>PayPal</button>
+            <p>Thank,you</p>
           </div>
-          <input type="submit" value="Subscribe">
-        </form>
+        </div>
+        <div class="item mobile">
+          <h2 class="donate-header" style="text-transform:uppercase;">Donate through mobile payment</h2>
+          <div id="cmtlist">
+            <p>Donate through mobile payment</p>
+            <p>Mpesa: +254724537444</p>
+          </div>
+        </div>
+        <div class="item bank">
+          <h2 class="donate-header" style="text-transform:uppercase;">Bank  donation</h2>
+          <div id="cmtlist">
+            <p>Donate through the bank</p>
+            <p>Bank Details:</p>
+            <p>A/c Name: Ananda Marga Mission</p>
+            <p>A/c No. 01129316484200</p>
+            <p>Bank: Co-operative Bank</p>
+            <p>Branch: Kangemi Branch</p>
+            <p>SWIFTBIC-KCOOKENA</p>
+            <p>Bank Address: P.O. Box:29134-00625, Nairobi</p>
+          </div>
+        </div>
       </div>
-      <div class="item">
-
-      <h4 style="text-transform:uppercase;"> Mission Center</h4>
-      <div id="googleMap" style=""></div>
     </div>
-  </div>
+
+    <div id="contact" class="section ">
+      <div class="imagine flx">
+        <div class="item form-news" >
+          <form method="post" action="" style="">
+            <h1>Newsletter Signup</h1>
+            <p>No spam, unsubscribe at any time.</p>
+            <div class="info">
+              <input type="text" placeholder="Your Name">
+              <input type="email" placeholder="Your Email">
+            </div>
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
+        <div class="item">
+
+          <h4 style="text-transform:uppercase;"> Mission Center</h4>
+          <div id="googleMap" style=""></div>
+        </div>
+      </div>
+    </div>
+
     <div id="footer" class="section">
       <footer style="position: relative;">
-          <div id="about" class=" flx">
+          <div id="connect" class="item-head flx-con">
+
             <div class="item">
-              <p>Head Office: Ananda Marga Mission in Kenya</p>
+
+              <a class="entypo-location"><span><p>Head Office: Ananda Marga Mission in Kenya</p></span></a>
               <p>Plot No 209</p>
               <p>Mountainview Estate, Waiyaki Way</p>
               <p>Nairobi, Kenya</p>
             </div>
+
             <div class="item">
-              <p>P.O. Box: 70202-00400, Nairobi, Kenya</p>
-              <p>Mobile: +254724537444</p>
-              <p>Email: ssnairobi74@gmail.com</p>
+
+              <a class="entypo-mobile"><span><p>Mobile: +254724537444</p></span></a>
+              <a class="entypo-address"><span><p>P.O. Box: 70202-00400, Nairobi, Kenya</p></span></a>
+              <a class="entypo-mail"><span><p>Email: ssnairobi74@gmail.com</p></span></a>
+
             </div>
-        </div>
+          </div>
       </footer>
     </div>
 </div>
@@ -924,6 +1032,7 @@ console.log(classList);
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8m-GFdkqBqDSVnNQAhXGLGlrN3pDiEAA&callback=myMap"></script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="js/amm.js"></script>
+  <!-- <script  src="js/amm.js"></script> -->
+  <script  src="js/hash.js"></script>
 </body>
 </html>

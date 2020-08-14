@@ -1,6 +1,19 @@
 #gallery {
-  margin: 0;
+/*  margin: 0;*/
   background-color: #000;
+}
+
+#gallery h2::before {
+  display: block;
+  content: " ";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#gallery .imagines{
+  margin-top: 6%;
 }
 
 .gheader{
@@ -9,6 +22,7 @@
   text-align: center;
   text-transform:uppercase;
 }
+
 .wrapper{
   padding-left: .9em;
   padding-right: .9em;
@@ -17,26 +31,24 @@
   overflow:hidden;
   scroll-behavior: smooth;
 }
-
-#gamm{
-
-  grid-template-columns: repeat(2,100%);
-
-}
-
-#gfp{
+.gamm{
 
   grid-template-columns: repeat(2,100%);
 
 }
 
-#gms{
+.gfp{
+
+  grid-template-columns: repeat(2,100%);
+
+}
+
+.gch{
 
   grid-template-columns: repeat(1,100%);
 
 }
-
-#gms{
+.gms{
 
   grid-template-columns: repeat(2,100%);
 
@@ -49,36 +61,36 @@
     margin: 20px 0;
 }
 
-#gamm section{
+.gamm section{
     grid-template-columns: repeat(3, auto);
 
 }
 
-#gfp section{
+.gfp section{
 
     grid-template-columns: repeat(4, auto);
 
 }
 
-#gfp #section5{
+.gfp #section5{
 
     grid-template-columns: repeat(3, auto);
 
 }
 
-#gch section{
+.gch section{
 
     grid-template-columns: repeat(3, auto);
 
 }
 
-#gms section{
+.gms section{
 
     grid-template-columns: repeat(3, auto);
 
 }
 
-#gms #section9{
+.gms #section9{
 
     grid-template-columns: repeat(2, auto);
 

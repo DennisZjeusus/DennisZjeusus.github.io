@@ -1,3 +1,10 @@
+@media screen and (min-width:1100px)
+{
+  header nav{
+
+  }
+}
+
 @media screen and (max-width:1100px)
 {
   body
@@ -16,12 +23,12 @@
 {
 
    header nav a{
-    font-size: .9em;
+    /*font-size: .9em;*/
     padding:.6em;
   }
-  nav .dropbtn {
+  /*nav .dropbtn {
     font-size: .9em;
-  }
+  }*/
 
 
 }
@@ -29,9 +36,9 @@
 @media screen and (max-width:600px)
 {
 
-  .section{
+  /*.section{
     padding-top: 36%;
-  }
+  }*/
 }
 
 

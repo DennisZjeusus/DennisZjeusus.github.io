@@ -53,7 +53,7 @@ body {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0 10em;
+  padding: 0 20em;
 }
 
 .cards__item {
@@ -81,6 +81,7 @@ body {
   flex: 1 1 100%;
   flex-direction: column;
   padding: 1rem;
+  max-height: min-content;
 }
 
 .card__image {
@@ -138,3 +139,8 @@ body {
   margin-bottom: 1.25rem;
 }
 
+#about .sec{
+
+  border-left: .72em solid rgb(255, 255, 224);
+
+}
